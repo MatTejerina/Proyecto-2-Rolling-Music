@@ -1,34 +1,57 @@
 // validacion del formulario
 function validacion() {
-    if (document.Formu.Usuario.value=="") {
-        document.getElementById("resultado").innerHTML="Ingresa un Usuario*";
+    let expresionCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    let soloLetras = /^[a-zA-Z\s]*$/;
+
+    if (document.Formu.Usuario.value == "") {
+        document.getElementById("resultado").innerHTML = "Ingresa un Usuario*";
         return false;
-    }else if (document.Formu.Usuario.value.length<6) {
-        document.getElementById("resultado").innerHTML="Minimo 6 caracteres*";
+    } else if (document.Formu.Usuario.value.length < 6) {
+        document.getElementById("resultado").innerHTML = "Mínimo 6 caracteres*";
         return false;
-    }else if (document.Formu.Email.value=="") {
-        document.getElementById("resultado").innerHTML="Ingresa un Mail*";
+    } else if (document.Formu.Email.value == "") {
+        document.getElementById("resultado").innerHTML = "Ingresa un Mail*";
         return false;
-    }else if (document.Formu.Contraseña.value=="") {
-        document.getElementById("resultado").innerHTML="Ingresa una Contraseña*";
+    } else if (!expresionCorreo.test(document.Formu.Email.value)) {
+        document.getElementById("resultado").innerHTML = "Correo electrónico inválido*";
         return false;
-    }else if (document.Formu.Contraseña.value.length<6) {
-        document.getElementById("resultado").innerHTML="Contraseña de 6 Caracteres*";
+    } else if (document.Formu.Contraseña.value == "") {
+        document.getElementById("resultado").innerHTML = "Ingresa una Contraseña*";
         return false;
-    }else if (document.Formu.Rcontraseña.value=="") {
-        document.getElementById("resultado").innerHTML="Repite la Contraseña*";
+    } else if (document.Formu.Contraseña.value.length < 6) {
+        document.getElementById("resultado").innerHTML = "Contraseña de 6 caracteres*";
         return false;
-    }else if (document.Formu.Rcontraseña.value !== document.Formu.Contraseña.value) {
-        document.getElementById("resultado").innerHTML="Las Contraseñas no Coinciden*";
+    } else if (document.Formu.Rcontraseña.value == "") {
+        document.getElementById("resultado").innerHTML = "Repite la Contraseña*";
         return false;
-    }else if (document.Formu.Nombre.value=="") {
-        document.getElementById("resultado").innerHTML="Ingresa tu Nombre*";
+    } else if (document.Formu.Rcontraseña.value !== document.Formu.Contraseña.value) {
+        document.getElementById("resultado").innerHTML = "Las Contraseñas no Coinciden*";
         return false;
-    }else if (document.Formu.Apellido.value=="") {
-        document.getElementById("resultado").innerHTML="Ingresa tu Apellido*";
+    } else if (document.Formu.Nombre.value == "") {
+        document.getElementById("resultado").innerHTML = "Ingresa tu Nombre*";
         return false;
+    } else if (!soloLetras.test(document.Formu.Nombre.value)) {
+        document.getElementById("resultado").innerHTML = "Ingresa solo letras en el Nombre*";
+        return false;
+    } else if (document.Formu.Apellido.value == "") {
+        document.getElementById("resultado").innerHTML = "Ingresa tu Apellido*";
+        return false;
+    } else if (!soloLetras.test(document.Formu.Apellido.value)) {
+        document.getElementById("resultado").innerHTML = "Ingresa solo letras en el Apellido*";
+        return false;
+    } else if (!document.getElementById('aceptoTerminos').checked) {
+        document.getElementById("resultado").innerHTML = "Debes aceptar los términos y condiciones*";
+        return false;
+    } else if (document.Formu.Contraseña.value == document.Formu.Rcontraseña.value) {
+        mensaje.classList.add("abrir-mensaje")
+        return false;
+    } else {
+        return true;
     }
 }
+
+let mensaje = document.getElementById("mensaje")
 // visualizar contraseñas
 const pass = document.getElementById("pass");
 const icon = document.querySelector(".cont");
