@@ -506,13 +506,11 @@ i{
     border-radius: 15px;
     top: 0;
     left: 50%;
-    transform: translate(-50%,-50%) scale(0);
-    transition: transform .4s , top , .4s;
-    visibility: hidden;
+    border: 2px solid #fff;
     text-align: center;
     padding: 0 30px 30px;
     height: 400px;
-    color: #000;
+    color: #fff;
 }
 .recuperar input{
     width: 100%;
@@ -522,10 +520,10 @@ i{
 
     outline: none;
     padding: 0 20px 0 5px;
-    color: #000;
+    color: #fff;
  }
  .recuperar input::placeholder{
-    color: #000;
+    color: #fff;
  }
  .recuperar button{
     width: 90%;
@@ -539,8 +537,6 @@ i{
     border-radius: 3px;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
  }
- .abrir-mensaje{
-    top: 50%;
-    transform: translate(-50%,-50%) scale(1);
-    visibility: visible;
-}
+ .imagen{
+    margin-top: 10px;
+ }

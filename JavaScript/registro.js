@@ -51,7 +51,7 @@ function validacion() {
     }
 }
 
-let mensaje = document.getElementById("mensaje")
+// let mensaje = document.getElementById("mensaje")
 // visualizar contraseñas
 const pass = document.getElementById("pass");
 const icon = document.querySelector(".cont");
@@ -83,4 +83,14 @@ icon2.addEventListener("click", e=> {
         icon2.classList.remove("bx-hide")
     }
 })
-
+function enviarMail() {
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "hache.83@gmail.com",
+        Password : "9812628575310C1BA59903F37E847C50FFC9",
+        To : 'tejerinamatias83@gmail.com',
+        From : "hache.83@gmail.com",
+        Subject : "Gracias por suscribirse",
+        Body : "Estamos muy agradecidos de tu parcicipacion en nuestra comunidad"
+    }).then(message => alert(message));    
+}

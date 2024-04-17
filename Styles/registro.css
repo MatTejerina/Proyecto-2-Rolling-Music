@@ -112,7 +112,7 @@ input::placeholder{
 }
 .mensaje{
     width: 450px;
-    background-color: #fff;
+    /* background-color: #fff; */
     border-radius: 10px;
     position: absolute;
     top: 0;
@@ -124,6 +124,8 @@ input::placeholder{
     padding: 0 30px 30px;
     height: 330px;
     color: #000;
+    backdrop-filter: blur(500px);
+    
 }
 .mensaje h2{
     color: #000;
@@ -137,7 +139,8 @@ input::placeholder{
 }
 .mensaje button{
     width: 100%;
-    background: #00ff00;
+    background: blue;
+    /* background: #00ff00; */
     padding: 10px 0;
     margin-top: 50px;
     border: none;
@@ -146,6 +149,9 @@ input::placeholder{
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 0 0 2px rgba(0,0,0,.1);
+}
+.mensaje button:hover {
+    background-color: navy;
 }
 .mensaje a{
     color: #fff;

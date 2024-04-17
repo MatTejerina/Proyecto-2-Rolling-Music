@@ -23,7 +23,6 @@ function validacion() {
     
 }
 
-let mensaje = document.getElementById("mensaje")
 // visualizar contraseñas
 const pass = document.getElementById("pass");
 const icon = document.querySelector(".cont");
@@ -39,3 +38,7 @@ icon.addEventListener("click", e=> {
         icon.classList.remove("bx-hide")
     }
 })
+function mostrar() {
+    document.getElementById("recuperarContraseña")
+    
+}
