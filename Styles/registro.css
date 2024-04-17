@@ -102,9 +102,9 @@ input::placeholder{
     text-decoration: none;
     font-weight: 500;
     margin-left: 10px;
-    cursor: default;
+    /* cursor: default; */
 }
-.termino a:focus{
+.terminos a:focus{
     text-decoration: underline;
 }
 .cont{
