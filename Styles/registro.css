@@ -117,14 +117,14 @@ input::placeholder{
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%,-50%) scale(0);
-    transition: transform .4s,top .4s;
+    /* transform: translate(-50%,-50%) scale(0); */
+    /* transition: transform .4s,top .4s; */
     visibility: hidden;
     text-align: center;
     padding: 0 30px 30px;
     height: 330px;
     color: #000;
-    backdrop-filter: blur(500px);
+    backdrop-filter: blur(1500px);
     
 }
 .mensaje h2{
@@ -140,7 +140,6 @@ input::placeholder{
 .mensaje button{
     width: 100%;
     background: blue;
-    /* background: #00ff00; */
     padding: 10px 0;
     margin-top: 50px;
     border: none;

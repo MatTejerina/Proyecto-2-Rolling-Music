@@ -43,7 +43,7 @@
                         <input type="text" name="Apellido" placeholder="Ingresa tu Apellido">
                     </div>
                     <div class="boton">
-                        <input type="submit" class="btnreg" onclick="validacion(),enviarMail()"  value="Registrate">
+                        <input type="submit" class="btnreg" onclick="validacion()" value="Registrate">
                     </div>
                     <div class="terminos">
                         <input type="checkbox" id="aceptoTerminos">
@@ -54,7 +54,7 @@
                     <i class='bx bx-check-circle check'></i>
                     <h2>Gracias por Registrarte!</h2>
                     <p>Tu registro fue exitoso. Gracias!</p>
-                    <a href="../Pages/registro.html"><button>OK</button></a>
+                    <a href="../Pages/registro.html" onclick="enviarMail()"><button>OK</button></a>
                 </div>
             </div>
         </div>

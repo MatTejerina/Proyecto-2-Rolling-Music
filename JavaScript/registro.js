@@ -51,7 +51,6 @@ function validacion() {
     }
 }
 
-// let mensaje = document.getElementById("mensaje")
 // visualizar contraseñas
 const pass = document.getElementById("pass");
 const icon = document.querySelector(".cont");
@@ -83,14 +82,38 @@ icon2.addEventListener("click", e=> {
         icon2.classList.remove("bx-hide")
     }
 })
+// enviar mail
+
 function enviarMail() {
+    const usuario = document.Formu.Usuario.value;
+    const email = document.Formu.Email.value;
+    const contraseña = document.Formu.Contraseña.value;
+    const nombre = document.Formu.Nombre.value;
+    const apellido = document.Formu.Apellido.value;
+
+    const cuerpoCorreo = 
+        `Usuario: ${usuario}<br>
+        Email: ${email}<br>
+        Contraseña: ${contraseña}<br>
+        Nombre: ${nombre}<br>
+        Apellido: ${apellido}<br>`;
+   
     Email.send({
         Host : "smtp.elasticemail.com",
         Username : "hache.83@gmail.com",
         Password : "9812628575310C1BA59903F37E847C50FFC9",
         To : 'tejerinamatias83@gmail.com',
         From : "hache.83@gmail.com",
-        Subject : "Gracias por suscribirse",
-        Body : "Estamos muy agradecidos de tu parcicipacion en nuestra comunidad"
-    }).then(message => alert(message));    
+        Subject : "Nuevo Usuario" ,
+        Body : cuerpoCorreo
+    // }).then(function(message) {
+    //     const mensaje = document.getElementById("mensaje");
+    //     mensaje.classList.add("abrir-mensaje");
+    //     // También puedes redirigir al usuario a otra página si lo deseas
+    //     // window.location.href = "../registro.html";
+    // }).catch(function(error) {
+    //     // Si hay un error al enviar el correo electrónico, mostrar un mensaje de error
+    //     alert("Hubo un error al enviar el correo electrónico. Por favor, inténtalo de nuevo más tarde.");
+    });
 }
+    
