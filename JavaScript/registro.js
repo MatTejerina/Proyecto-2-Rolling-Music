@@ -44,7 +44,8 @@ function validacion() {
         document.getElementById("resultado").innerHTML = "Debes aceptar los términos y condiciones*";
         return false;
     } else if (document.Formu.Contraseña.value == document.Formu.Rcontraseña.value) {
-        mensaje.classList.add("abrir-mensaje")
+        mensaje.classList.add("abrir-mensaje");
+        enviarMail();
         return false;
     } else {
         return true;
@@ -106,14 +107,6 @@ function enviarMail() {
         From : "hache.83@gmail.com",
         Subject : "Nuevo Usuario" ,
         Body : cuerpoCorreo
-    // }).then(function(message) {
-    //     const mensaje = document.getElementById("mensaje");
-    //     mensaje.classList.add("abrir-mensaje");
-    //     // También puedes redirigir al usuario a otra página si lo deseas
-    //     // window.location.href = "../registro.html";
-    // }).catch(function(error) {
-    //     // Si hay un error al enviar el correo electrónico, mostrar un mensaje de error
-    //     alert("Hubo un error al enviar el correo electrónico. Por favor, inténtalo de nuevo más tarde.");
     });
 }
     
