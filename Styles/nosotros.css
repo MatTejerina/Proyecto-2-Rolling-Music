@@ -1,193 +1,191 @@
-* {
-	box-sizing: border-box;
-}
-
-h1, h2, h3, h4, p, a {
-    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
 html {
-    height: 100%;
+    /* width: 100vw; */
 }
 
 body {
-	/* background-image: url('https://cdn.pixabay.com/photo/2016/11/19/22/52/coding-1841550_1280.jpg'); */
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://cdn.pixabay.com/photo/2016/11/19/22/52/coding-1841550_1280.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    position: relative;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(37,0,89,1) 100%) !important;
+    background: none;
+    width: 100% !important;
 }
 
 .acerca-de {
-    height: 100%;
-}
-
-.tarjetas {
     width: 100%;
-    height: 100vh;
-}
-
-.tarjeta {
-	width: 220px;
-	height: 200px;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0 36px;
-	perspective: 2500px;
-	border-radius: 30px;
-}
-
-.cover-image {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.fondo-tarjeta {
-	transition: all 0.5s;
-	position: absolute;
-	width: 100%;
-	z-index: -1;
-	background: #000;
-	border-radius: 30px;
-	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-
-.fondo-tarjeta img {
-	border-radius: 30px;
-	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-
-.tarjeta:hover .fondo-tarjeta {
-	transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-	--box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-	--webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-	--moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-}
-
-.fondo-tarjeta::before,
-.fondo-tarjeta::after {
-	content: "";
-	opacity: 0;
-	width: 100%;
-	height: 80px;
-	transition: all 0.5s;
-	border-radius: 30px;
-	position: absolute;
-	left: 0;
-	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-.fondo-tarjeta::before {
-	top: 0;
-	height: 100%;
-	background-image: linear-gradient(to top,transparent 46%,rgba(12, 13, 19, 0.5) 68%,rgba(12, 13, 19) 97%);
-}
-
-.fondo-tarjeta::after {
-	bottom: 0;
-	opacity: 1;
-	background-image: linear-gradient(to bottom,transparent 46%,rgba(12, 13, 19, 0.5) 68%,rgba(12, 13, 19) 97%);
-}
-
-.tarjeta:hover .fondo-tarjeta::before,
-.fondo-tarjeta::after {
-	opacity: 1;
-}
-
-.tarjeta:hover .fondo-tarjeta::after {
-	height: 120px;
-}
-
-.nombres {
-	width: 100%;
-	text-align: center;
-    font-size: 1rem;
-	color: white;
-	text-transform: uppercase;
-	transition: transform 0.5s;
-    text-shadow: 2px 2px 3px rgb(32, 0, 83);
-    margin-bottom: 5px;
-}
-
-.interior-tarjeta {
     height: 100%;
+    margin-bottom: 100px;
+    margin-top: 50px !important;
+    transition: ease all .5s;
+}
+
+.contenedor-objetos {
+    transition: ease all .5s;
+}
+
+.acerca-de-grupal img {
+    width: 300px;
+    margin-top: 40px;
+    margin-left: 20px;
+    border-radius: 0 10px 10px 0;
+    transition: ease all .5s;
+}
+
+.acerca-de-grupal .texto {
+    text-align: end;
+    transition: ease all .5s;
+}
+
+.acerca-de-grupal .texto {
+    p {
+        width: 450px;
+        margin-bottom: 0;
+        color: rgba(255, 255, 255, 0.484);
+    }
+    
+    h2 {
+        color: white;
+        font-size: 3rem;
+        width: 450px;
+        height: 75px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.456);
+    }
+}
+
+.separador {
+    width: 70%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.085);
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 922px) {
+    .contenedor-objetos {
+        flex-direction: column;
+        transition: ease all .5s;
+    }
+
+    .acerca-de-grupal img {
+        width: 350px;
+        border-radius: 0;
+        margin-bottom: 30px;
+        margin: 30px 10px 30px 10px;
+    }
+
+    .acerca-de-grupal .texto {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .acerca-de-grupal .texto {
+        transform: scale(.8);
+    }
+
+    .tarjeta {
+        transform: scale(.9);
+    }
+
+    .contenedor-objetos {
+        transform: scale(.9);
+    }
+}
+
+.staff .ripple {
+    color: rgba(255, 255, 255, 0);
+    font-weight: 800;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+.staff {
+    font-size: 2.3rem;
+}
+
+
+.staff-2 {
+    font-weight: 300;
+    color: white;
+}
+
+.container{
+    height: 250px;
+    width: 185px;
     display: flex;
-    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.redes-tarjeta {
-    transition: transform 0.5s;
-    bottom: 20%;
+.card_1{
+    width: 370px;
+    perspective: 1000px;
+    margin: 100px;
+    transform: scale(.5);
 }
-
-.redes-tarjeta a {
-    background-color: #ffffff;
-    width: 25px;
-    height: 25px;
+.card_1 .card_inner{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.card_1 .front{
+    backface-visibility: hidden;
+    height: 500px;
+}
+.card_1 .front img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.card_1 .back{
+    backface-visibility: hidden;
+    background: rgb(23, 0, 44);
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2px;
+    flex-direction: column;
+    transform: rotateY(180deg);
+}
+.card_1 .back h2{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+.card_1 .back p{
+    width: 90%;
+    color: rgba(255, 255, 255, 0.447);
+    font-size: 25px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+.card_1 .social .icon{
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    background: #000000;
     border-radius: 50%;
-    color: black;
-    text-decoration: none;
-    transition: transform 0.5s;
+    margin: 25px 6px; 
+    padding: 10px; 
+    transition: .5s;
 }
 
-.redes-tarjeta a:hover {
-    background-color: rgb(71, 0, 114);
-    color: white;
+.card_1:hover .card_inner{
+    transform: rotateY(-180deg);
+    box-shadow: 0px 10px 250px 15px rgba(74, 0, 159, 0.39);
+}
+
+.card_1 .social .icon:hover {
+    color: rgb(95, 0, 191);
+    background-color: #fff;
     transform: scale(1.3);
-    box-shadow: rgba(0, 200, 255, 1) 0px 0px 18px;
-}
-
-.tarjeta:hover .redes-tarjeta {
-	transform: translate3d(0%, -50px, 100px);
-}
-
-.tarjeta p {
-    margin: 0;
-    transition: transform 0.5s;
-    width: 100%;
-    color: white;
-    font-size: .4rem;
-    margin-bottom: 5px;
-}
-
-
-.tarjeta:hover p {
-	transform: translate3d(0%, -50px, 100px);
-    text-shadow: 2px 2px 3px rgb(0, 0, 0);
-}
-
-.tarjeta:hover .nombres {
-	transform: translate3d(0%, -50px, 50px);
-}
-
-.tarjeta:hover .cover-image {
-    opacity: 0.3;
-}
-
-.foto-hover {
-	width: 100%;
-	opacity: 0;
-	transition: all 0.5s;
-	filter: drop-shadow(2px 2px 2px #000);
-	position: absolute;
-	z-index: -1;
-}
-
-.tarjeta:hover .foto-hover {
-	opacity: 1;
-	transform: translate3d(0%, -17%, 670px);
 }
