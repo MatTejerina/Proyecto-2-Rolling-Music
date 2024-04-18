@@ -7,6 +7,9 @@ recuerdame.addEventListener('click', function(event) {
 })
 
 function validacion() {
+    var usuario = document.Formu.Usuario.value;
+    var contraseña = document.Formu.Contraseña.value;
+
     if (document.Formu.Usuario.value == "") {
         document.getElementById("resultado").innerHTML = "Ingresa un Usuario*";
         return false;        
@@ -18,6 +21,15 @@ function validacion() {
         return false;
     } else if (document.Formu.Contraseña.value.length < 6) {
         document.getElementById("resultado").innerHTML = "Contraseña de 6 caracteres*";
+        return false;
+    } else if (usuario === "admin1" && contraseña === "123123") {
+        window.location.href = "../Pages/pag-adm.html";
+        return false;
+    } else if (usuario === "matias" && contraseña === "123123") {
+        window.location.href = "../Pages/adm-usu.html";
+        return false;
+    } else {
+        document.getElementById("resultado").innerHTML = "Usuario o contraseña incorrectos";
         return false;
     }
     

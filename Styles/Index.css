@@ -20,11 +20,13 @@ body {
 }
 
 .search-container {
+    width: 400px;
     position: relative;
     display: inline-block;
 }
 
 .inputbuscar {
+    width: 100%;
     flex: 1;
     background-color: transparent !important;
     border: 1px solid rgb(255, 255, 255) !important;
@@ -42,17 +44,17 @@ body {
 .search-icon {
     position: absolute;
     top: 83%;
-    right: -12%;
+    right: -10%;
     transform: translateY(-91%);
     width: 25px;
     height: 25px;
-    background-image: url('/img/lupa.png');
+    background-image: url('/img/search.png');
     background-size: cover;
     cursor: pointer;
     border: none;
     background-color: transparent;
+    color: #fff;
 }
-
 
 .search-icon:hover {
     opacity: 0.7;
@@ -467,6 +469,9 @@ input::placeholder{
     border: none;
     font-size: 20px;
     box-shadow: 3px 0 10px rgba(0,0,0,.5);
+}
+.boton:hover {
+    background-color: navy;
 }
 .grupo{
     display: flex;
