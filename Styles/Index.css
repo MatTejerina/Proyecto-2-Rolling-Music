@@ -417,12 +417,15 @@ body {
 .footer_area .footer_menu ul li a:focus {
     text-decoration: none;
 }
-/* Modal de acceder */
+/*  - - Modal de acceder - - */
 .contenedor{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100%;
+}
+.logo{
+    
 }
 .formu{
     position: relative;
