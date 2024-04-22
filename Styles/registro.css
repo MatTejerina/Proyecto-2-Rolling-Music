@@ -6,8 +6,7 @@
 }
 body{
     background-image: url(../img/registro.jpg);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/registro.jpg);
-    /* background: url() rgba(256, 256, 256, 0.3); */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/registro.jpg);
     background-position: center;
     background-size: cover;
     min-height: 100vh;
@@ -16,8 +15,8 @@ body{
 .contenedor{
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    min-height: 65vh;
+    
 }
 .formulario{
     position: relative;
@@ -29,6 +28,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 .formulario h2{
     color: #fff;
