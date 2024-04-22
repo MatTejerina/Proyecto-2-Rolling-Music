@@ -16,7 +16,7 @@ body{
     display: flex;
     justify-content: center;
     min-height: 65vh;
-    
+    margin: 20px;
 }
 .formulario{
     position: relative;
@@ -66,13 +66,12 @@ div i{
     top: 13px;
     right: 0;
 }
-/* input::placeholder{
+input::placeholder{
     color: #fff;
-} */
+}
 .btnreg {
     color: #fff;
-    background-color: blue;
-    /* width: 100%; */
+    background-color: #0000ff;
     height: 50px;
     border-radius: 5px;
     outline: none;
@@ -250,6 +249,7 @@ div i{
 }
 
 .footer_social_area a i {
+    position: relative;
     line-height: 36px;
 }
 
