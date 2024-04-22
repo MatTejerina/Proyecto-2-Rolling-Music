@@ -54,3 +54,60 @@ function mostrar() {
     document.getElementById("recuperarContraseña")
     
 }
+// buscador
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const searchInput = document.querySelector(".inputbuscar");
+    const resultList = document.getElementById("resultsList");
+    const noResults = document.getElementById("noResults");
+
+    let musicLibrary = [];
+
+    // Cargar el archivo JSON
+    try {
+        const response = await fetch("/json/biblioteca.json"); // Ajusta la ruta según sea necesario
+        if (response.ok) {
+            musicLibrary = await response.json();
+        } else {
+            console.error("Error al cargar el archivo JSON.");
+        }
+    } catch (error) {
+        console.error("Error al hacer la solicitud del archivo JSON:", error);
+    }
+
+    const handleSearch = () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        const filteredResults = musicLibrary.filter(item => 
+            item.artista.toLowerCase().includes(searchTerm) ||
+            item.nombre.toLowerCase().includes(searchTerm)
+        );
+
+        resultList.innerHTML = "";
+
+        if (filteredResults.length > 0) {
+            filteredResults.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = `${item.artista} - ${item.nombre}`;
+                li.classList.add("selectable-result"); // Para aplicar estilos
+                li.addEventListener("click", () => {
+                    if (item.artista.toLowerCase() === "marshmello" && 
+                        item.nombre.toLowerCase() === "alone") {
+                        window.location.href = "../Pages/registro.html"; // Redirigir a alone.html
+                    } else {
+                        window.location.href = "../Pages/Error-404.html"; // Redirigir a página predeterminada
+                    }
+                });
+                resultList.appendChild(li);
+            });
+            noResults.style.display = "none";
+        } else {
+            noResults.style.display = "block";
+        }
+
+        if (searchInput.value === "") {
+            resultList.innerHTML = "";
+        }
+    };
+
+    searchInput.addEventListener("input", handleSearch);
+});
