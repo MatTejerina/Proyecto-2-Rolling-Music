@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('/img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*Lo siguiente mantiene al footer siempre por debajo*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    --letra: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+
+/* NavBar */
+.navbar {
+    /* background-color: transparent !important; */
+    width: 100%;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+}
+
+.custom-search {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.inputbuscar {
+    flex: 1;
+    background-color: transparent !important;
+    border: 1px solid rgb(255, 255, 255) !important;
+    outline: none;
+    color: white !important;
+    text-align: center;
+    border-radius: 20px !important;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.inputbuscar::placeholder {
+    color: #908a8a !important;
+}
+
+.search-icon {
+    position: absolute;
+    top: 83%;
+    right: -12%;
+    transform: translateY(-91%);
+    width: 25px;
+    height: 25px;
+    background-image: url('/img/lupa.png');
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+
+.search-icon:hover {
+    opacity: 0.7;
+}
+
+.boton-custom {
+    border-radius: 200px;
+    transition: background-color 0.3s ease;
+    border: 1px solid rgb(255, 255, 255) !important;
+    border-radius: 15px !important;
+    padding: 6px !important;
+}
+
+
+.boton-custom:hover {
+    background: linear-gradient(135deg, #ff01f7, #970d92, #000000);
+    color: white !important;
+}
+
+.nav-link {
+    display: block;
+    text-align: center;
+}
+
+/*MAIN*/
+
+main {
+    position: relative;
+    min-height: 95vh;
+    display: flex;
+    filter: blur(0px);
+}
+
+.form {
+    height: 100%;
+    margin: auto auto !important;
+    width: 90%;
+    max-width: 500px !important;
+    padding: 2em 3.5em 2em 3.5em;
+    border-radius: 5%;
+    border-bottom: 3px solid #b41aaf;
+    border-top: 3px solid #b41aaf;
+    text-align: center;
+
+}
+
+.form_title {
+    font-size: 2rem;
+    margin-bottom: .1em;
+    color: white;
+}
+
+.form_container {
+    margin-top: 1em;
+    display: grid;
+    gap: 2.5em;
+
+}
+
+.form_group {
+    position: relative;
+    --color: #b41aaf;
+
+}
+
+.form_group2 {
+    display: flex;
+    flex-direction: column;
+    max-height: 100px;
+}
+
+.form_label2 {
+    left: 5px;
+    color: white;
+    font-family: var(--letra);
+    text-align: start;
+    font-size: 1rem;
+    padding-left: 5px;
+}
+
+.form_textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    font-family: var(--letra);
+    font-family: 1rem;
+
+}
+
+.form_input {
+    width: 100%;
+    background: none;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    border-bottom: 1px solid #293c7c;
+    font-family: var(--letra);
+}
+
+.form_input:focus+.form_label,
+.form_input:not(:placeholder-shown)+.form_label {
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: var(--color);
+
+}
+
+.form_input:focus {
+    border-bottom: 1px solid var(--color);
+
+}
+
+.form_label {
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    font-family: var(--letra);
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+
+.form_button {
+    background: none;
+    border-radius: 10%;
+    color: white;
+    font-family: var(--letra);
+    font-size: 1.2rem;
+    border: 2px solid white;
+    border-radius: .5em;
+    font-weight: 600;
+}
+
+.form_button:focus {
+    background: linear-gradient(135deg, #ff01f7, #970d92, #000000) !important;
+}
+
+
+
+
+/* .form_input:focus+.form_label,
+.forn_input:not(:placeholder-shown)+.form_label {
+    transform: translateY(-20px)scale(.9);
+    transform-origin: left top;
+    color: var(--color);
+} */
+
+
+
+/* @media(min-width: 768px) {
+    .form_container {
+        width: 700px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .form_group {
+        width: 300px;
+        margin: 0 20px;
+    }
+} */
+
+
+
+/*footer*/
+/* Footer */
+.footer_area {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 8px 48px 8px rgba(47, 91, 234, 0.175);
+    padding: 20px;
+    border-radius: 100px 100px 0 0;
+    margin-top: auto;
+}
+
+.single-footer-widget {
+    position: relative;
+    z-index: 1;
+}
+
+.single-footer-widget .copywrite-text a {
+    color: #33343d;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.single-footer-widget .copywrite-text a:hover,
+.single-footer-widget .copywrite-text a:focus {
+    color: #3f43fd;
+    text-decoration: underline;
+}
+
+.single-footer-widget .widget-title {
+    margin-bottom: 1.5rem;
+}
+
+.single-footer-widget .footer_menu li a {
+    color: #747794;
+    margin-bottom: 1rem;
+    display: block;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.single-footer-widget .footer_menu li a:hover,
+.single-footer-widget .footer_menu li a:focus {
+    color: #3f43fd;
+    text-decoration: underline;
+}
+
+.single-footer-widget .footer_menu li:last-child a {
+    margin-bottom: 0;
+}
+
+.footer_social_area {
+    position: relative;
+    z-index: 1;
+}
+
+.footer_social_area a {
+    border-radius: 50%;
+    height: 40px;
+    text-align: center;
+    width: 40px;
+    display: inline-block;
+    background-color: #000000;
+    line-height: 40px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-right: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer_social_area a i {
+    line-height: 36px;
+}
+
+.footer_social_area a:hover,
+.footer_social_area a:focus {
+    color: #ffffff;
+}
+
+.footer_area .footer_menu ul {
+    padding-left: 0;
+}
+
+.footer_area .footer_menu ul li {
+    list-style: none;
+}
+
+.footer_area .footer_menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer_area .footer_menu ul li a:hover,
+.footer_area .footer_menu ul li a:focus {
+    text-decoration: none;
+}

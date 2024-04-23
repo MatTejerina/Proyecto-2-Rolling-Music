@@ -200,6 +200,7 @@ h2 strong {
     font-weight: bold;
     transition: background-color 5s ease, color 10s ease;
     margin-bottom: 10px;
+    text-decoration: none;
 }
 
 .play-button::after {
@@ -533,6 +534,7 @@ i{
 /* Slider */
 .slider {
     width: 90vw;
+    margin-bottom: 100px !important;
     height: auto;
     margin: auto;
     overflow: hidden;
@@ -609,7 +611,7 @@ i{
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 3.5rem;
-  
+  padding: 0 35px;
 }
 
 .footer-row .footer-col h4 {

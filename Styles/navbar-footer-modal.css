@@ -253,14 +253,15 @@ i{
 }
 
 /* * Footer */ 
+
 .footer {
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 95%;
-  background: #10182F;
+  padding-top: 30px;
+  width: 100%;
+  background: #10182f96;
   border-radius: 6px;
+  margin-top: auto;
 }
 
 .footer .footer-row {
@@ -268,6 +269,7 @@ i{
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 3.5rem;
+  padding: 0 35px;
   
 }
 
@@ -281,6 +283,10 @@ i{
 
 .footer-col .links {
   margin-top: 20px;
+}
+
+.footer-col ul {
+  padding: 0;
 }
 
 .footer-col .links li {
