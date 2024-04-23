@@ -1,3 +1,4 @@
+// Recuerdame
 const recuerdame = document.getElementById('recuerdame');
 const checkout = document.getElementById('checkout');
 
@@ -63,9 +64,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     let musicLibrary = [];
 
-    // Cargar el archivo JSON
     try {
-        const response = await fetch("/json/biblioteca.json"); // Ajusta la ruta según sea necesario
+        const response = await fetch("/json/biblioteca.json");
         if (response.ok) {
             musicLibrary = await response.json();
         } else {
@@ -88,13 +88,13 @@ document.addEventListener("DOMContentLoaded", async () => {
             filteredResults.forEach(item => {
                 const li = document.createElement("li");
                 li.textContent = `${item.artista} - ${item.nombre}`;
-                li.classList.add("selectable-result"); // Para aplicar estilos
+                li.classList.add("selectable-result");
                 li.addEventListener("click", () => {
                     if (item.artista.toLowerCase() === "marshmello" && 
                         item.nombre.toLowerCase() === "alone") {
-                        window.location.href = "../Pages/registro.html"; // Redirigir a alone.html
+                        window.location.href = "../Pages/detalle-cancion.html";
                     } else {
-                        window.location.href = "../Pages/Error-404.html"; // Redirigir a página predeterminada
+                        window.location.href = "../Pages/Error-404.html";
                     }
                 });
                 resultList.appendChild(li);
