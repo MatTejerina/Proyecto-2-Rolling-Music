@@ -21,8 +21,7 @@ body {
 }
 
 .acerca-de-grupal img {
-    width: 300px;
-    margin-top: 40px;
+    width: 350px;
     margin-left: 20px;
     border-radius: 0 10px 10px 0;
     transition: ease all .5s;
@@ -155,9 +154,16 @@ body {
 }
 .card_1 .back h2{
     color: rgb(255, 255, 255);
-    font-size: 40px;
+    font-size: 30px;
     margin-top: 10px;
-    font-weight: 600;
+    height: 130px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    border-bottom: 2px solid white;
+}
+.card_1 .back .nombre-tarjeta{
+    font-size: 50px;
+    font-weight: 800;
 }
 .card_1 .back p{
     width: 90%;
@@ -165,6 +171,12 @@ body {
     font-size: 25px;
     margin-top: 10px;
     font-weight: 300;
+    line-height: 1.2;
+}
+
+.card_1 .back .descripcion{
+    font-weight: 800;
+    line-height: 1;
 }
 .card_1 .social .icon{
     color: #fff;
