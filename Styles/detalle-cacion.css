@@ -50,41 +50,19 @@ a {
 
 /**Estrellas*/
 
-#form {
-    width: 250px;
-    margin: 0 auto;
-    height: 50px;
+.estrella {
+    font-size: 32px;
+    color: #ddd;
+    transition: color 0.3s;
+    cursor: pointer;
 }
 
-#form p {
-    text-align: center;
+.estrella:hover {
+    color: gold;
 }
 
-#form label {
-    font-size: 20px;
-}
-
-input[type="radio"] {
-    display: none;
-}
-
-label {
-    color: grey;
-}
-
-.clasificacion {
-    direction: rtl;
-    unicode-bidi: bidi-override;
-    text-align: end;
-}
-
-label:hover,
-label:hover ~ label {
-    color: orange;
-}
-
-input[type="radio"]:checked ~ label {
-    color: orange;
+.estrella.checked {
+    color: gold;
 }
 
 /**Estrellas*/
