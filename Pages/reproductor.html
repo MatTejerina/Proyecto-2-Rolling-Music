@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ripple</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/reproductor.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="menu-aside">
+            <div class="logo">
+                <img src="../img/logo-blanco.png" alt="" width="150">
+            </div>
+            <ul class="playlists" id="menuMusic">
+                <li class="playlist"><a href="#" class="play playLista" id="cargarEstudiar">Lista de reproduccion</a></li>
+                <li class="playlist"><a href="#" class="play playRock">Rock</a></li>
+                <li class="playlist"><a href="#" class="play playCumbia">Cumbia</a></li>
+                <li class="playlist"><a href="#" class="play playElectronica">Electronica</a></li>
+                <li class="playlist"><a href="#" class="play playPop">Pop</a></li>
+                <li class="playlist"><a href="#" class="play playReggaeton">Reggaeton</a></li>
+                <li class="playlist"><a href="#" class="play playReggea">Reggea</a></li>
+                <li class="playlist"><a href="#" class="play playCuarteto">Cuarteto</a></li>
+                <li class="playlist"><a href="#" class="play playRkt">Rkt</a></li>
+                <li class="playlist"><a href="#" class="play playRap">Rap</a></li> 
+                <li class="playlist"><a href="#" class="play playFolklore">Folklore</a></li>
+                <li class="playlist"><a href="#" class="play playBachata">Bachata</a></li>
+            </ul>
+        </aside>
+        <div class="album" id="album">
+            <div class="user">
+                <a href="#" class="user-desc">
+                    <i class="fas fa-user"></i> Acceder
+                  </a>
+                  
+            </div>
+            <div class="animate"></div>
+            <div class="album-description">
+                <div class="album-img">
+                    <img id="imgAlbum" src="../img/RIPPLEM.png" width="250" height="150">
+                </div>
+                <div class="album-text">
+                    <div class="title">
+                        <span class="center-text">Tu Playlist</span>
+                        <h2 id="titlePlaylist" class="center-text">Seleccione su PlayList</h2>
+                    </div>
+                    <div class="description">
+                        <p id="playDescription" class="description_ center-text" >¡ Podes subir la musica que mas te gusta !</p>
+                    </div>
+                    <div class="acciones">
+                    
+                        <label for="subirArchivo" class="boton-archivo center-text">Subir Canciones</label>
+                        <input type="file" id="subirArchivo" multiple style="display: none;">
+                        <a href="#" class="btn reaccion-inactiva" id="reaccion"><i class="fas fa-heart cora"></i></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="album-list-music">
+                <ul class="list-music" id="lista-music">
+                    <li class="music">
+                        <img src="../img/nota-musical.png" alt="" class="nota-musical">
+                        <h3>Artista</h3>
+                        <h3 class="name" id="name">Cancion</h3>
+                        <h3 class="time">Duracion</h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="reproducir">
+        <div class="controles" id="controles">
+            <a href="#" class="btn control atras"><i class="fas fa-backward"></i></a>
+            <a href="#" class="btn control pausa"><i class="far fa-pause-circle"></i></a>
+            <a href="#" class="btn control play-musica"><i class="far fa-play-circle"></i></a>
+            <a href="#" class="btn control siguiente"><i class="fas fa-forward"></i></a>
+            <div class="volumen">
+                <a href="#" class="subir"></a>
+                <a href="#" class="bajar"></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JavaScript/reproductor.js"></script>
+    <script src="../apis/spotifyAPI.js"></script>
+</body>
+</html>
