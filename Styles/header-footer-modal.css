@@ -3,12 +3,6 @@
     margin: 0;
     padding: 0;
   }
-
-body {
-  position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
   
   .nav {
     position: static;
@@ -235,11 +229,15 @@ input::placeholder{
   top: 25px;
   height: 1em;
 }
+.input i{
+    position: absolute;
+    color: #fff;
+    top: 13px;
+    right: 0;
+}
 .bxicon{
-  position: absolute;
+  font-size: 20px;
   color: #fff;
-  top: 13px;
-  right: 0;
 }
 .cerrar{
   margin: 10px 10px;
@@ -333,13 +331,11 @@ display: none;
   /*  Footer */ 
 
 .footer {
-  position: absolute;
-  bottom: 0;
   padding-top: 30px;
   width: 100%;
   background: #10182f96;
   border-radius: 6px;
-  /* margin-top: auto; */
+  margin-top: 50px;
 }
 
 .footer .footer-row {
@@ -375,6 +371,10 @@ display: none;
 .footer-col .links li a, .footer-col div a i {
   text-decoration: none;
   color: #bfbfbf;
+}
+.footer-col div a i{
+  font-size: 30px;
+  margin: 5px;
 }
 
 .footer-col .links li a:hover {
@@ -449,7 +449,8 @@ display: none;
     left: 0;
     transform: none;
     width: 100%;
-    border-radius: 0;
+    /* border-radius: 10px; */
+    margin-top: 50px;
   }
 
   .footer .footer-row {
@@ -468,7 +469,4 @@ display: none;
   .footer-col form button {
     margin: 10px 0 0 0;
   }
-}
-.iconredes{
-  margin: 5px;
 }

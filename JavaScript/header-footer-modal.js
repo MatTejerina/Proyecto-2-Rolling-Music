@@ -1,3 +1,37 @@
+
+// visualizar contraseñas
+const pass = document.getElementById("pass");
+const icon = document.querySelector(".cont");
+
+icon.addEventListener("click", e=> {
+    if (pass.type === "password") {
+        pass.type = "text";
+        icon.classList.remove("bx-show-alt")
+        icon.classList.add("bx-hide")
+    }else {
+        pass.type = "password";
+        icon.classList.add("bx-show-alt")
+        icon.classList.remove("bx-hide")
+    }
+})
+
+// visualizar repite contraseñas
+const pass2 = document.getElementById("rpass");
+const icon2 = document.querySelector(".rcont");
+
+icon2.addEventListener("click", e=> {
+    if (pass2.type === "password") {
+        pass2.type = "text";
+        icon2.classList.remove("bx-show-alt")
+        icon2.classList.add("bx-hide")
+    }else {
+        pass2.type = "password";
+        icon2.classList.add("bx-show-alt")
+        icon2.classList.remove("bx-hide")
+    }
+})
+
+
 // barra de buscador
 const nav = document.querySelector(".nav"),
   searchIcon = document.querySelector("#searchIcon"),
@@ -115,23 +149,22 @@ function validacion() {
     }
     
 }
+// // visualizar contraseñas
+// const pass = document.getElementById("pass");
+// const icon = document.querySelector(".cont");
 
-// visualizar contraseñas
-const pass = document.getElementById("pass");
-const icon = document.querySelector(".cont");
-
-icon.addEventListener("click", e=> {
-    if (pass.type === "password") {
-        pass.type = "text";
-        icon.classList.remove("bx-show-alt")
-        icon.classList.add("bx-hide")
-    }else {
-        pass.type = "password";
-        icon.classList.add("bx-show-alt")
-        icon.classList.remove("bx-hide")
-    }
-})
-function mostrar() {
-    document.getElementById("recuperarContraseña")
+// icon.addEventListener("click", e=> {
+//     if (pass.type === "password") {
+//         pass.type = "text";
+//         icon.classList.remove("bx-show-alt")
+//         icon.classList.add("bx-hide")
+//     }else {
+//         pass.type = "password";
+//         icon.classList.add("bx-show-alt")
+//         icon.classList.remove("bx-hide")
+//     }
+// })
+// function mostrar() {
+//     document.getElementById("recuperarContraseña")
     
-}
+// }
