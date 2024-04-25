@@ -453,7 +453,8 @@ i{
 /* Slider */
 .slider {
     width: 90vw;
-    margin-bottom: 100px !important;
+    margin-bottom: -50px !important;
+    margin-top: 100px !important;
     height: auto;
     margin: auto;
     overflow: hidden;
@@ -465,6 +466,8 @@ i{
     animation: scroll 360s linear infinite;
     -webkit-animation: scroll 120s linear infinite;
     width: calc(50px * 66);
+    gap: 30px;
+    
 }
 
 .slider .slide {
@@ -510,4 +513,14 @@ i{
 .boton-reproduccion:hover {
     background-color: #000000;
     color: rgb(255, 255, 255);
+}
+
+/* Scroll */
+.fade-in {
+    opacity: 0;
+    transition: opacity 3s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
 }

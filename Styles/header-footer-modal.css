@@ -341,7 +341,7 @@ display: none;
 .footer .footer-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 3.5rem;
   padding: 0 35px;
   
@@ -351,7 +351,6 @@ display: none;
   color: #fff;
   font-size: 1.2rem;
   font-weight: 400;
-  margin-left: 30px;
 
 }
 
@@ -441,6 +440,31 @@ display: none;
 .footer-col .icons i:hover  {
   color: #fff;
 }
+.footer-col.redes {
+  text-align: center;
+}
+
+.redes-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  gap: 15px;
+}
+
+.redes-icons img {
+  width: 30px; /* Ajusta el tamaño de los iconos según sea necesario */
+}
+.redes-icons a {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.redes-icons a:hover {
+  transform: scale(1.4);
+}
+
+
 
 @media (max-width: 768px) {
   .footer {
@@ -449,7 +473,6 @@ display: none;
     left: 0;
     transform: none;
     width: 100%;
-    /* border-radius: 10px; */
     margin-top: 50px;
   }
 
