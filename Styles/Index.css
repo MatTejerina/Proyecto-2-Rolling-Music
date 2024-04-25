@@ -596,7 +596,8 @@ input::placeholder{
 /* Slider */
 .slider {
     width: 90vw;
-    margin-bottom: 100px !important;
+    margin-bottom: -50px !important;
+    margin-top: 100px !important;
     height: auto;
     margin: auto;
     overflow: hidden;
@@ -608,6 +609,8 @@ input::placeholder{
     animation: scroll 360s linear infinite;
     -webkit-animation: scroll 120s linear infinite;
     width: calc(50px * 66);
+    gap: 30px;
+    
 }
 
 .slider .slide {
@@ -654,6 +657,7 @@ input::placeholder{
     background-color: #000000;
     color: rgb(255, 255, 255);
 }
+<<<<<<< HEAD
 /*  Footer */ 
 
 .footer {
@@ -798,3 +802,15 @@ input::placeholder{
       margin: 10px 0 0 0;
     }
   }
+=======
+
+/* Scroll */
+.fade-in {
+    opacity: 0;
+    transition: opacity 3s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+>>>>>>> 9c327eb36d5da200da8d15d4acab365333a61a91
