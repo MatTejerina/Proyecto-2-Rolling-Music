@@ -21,44 +21,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     <!-- Icinos boxcoins -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <!-- Titulo -->
     <title>RIPPLE</title>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid fade-in">
-            <a class="navbar-brand" href="Index.html">
-                <img src="./img/logo-blanco.png" alt="Logo" width="100"class="mx-auto" >
-            </a>
-            <button class="navbar-toggler bg-white border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="d-flex mx-auto ms-auto mb-2 mb-lg-0 custom-search" role="search">
-                    <div class="search-container position-relative">
-                        <input class="form-control inputbuscar" id="searchInput" type="search" placeholder="Buscar canciones, artistas" aria-label="Buscar">
-                        <ul id="resultsList" class="list-group position-absolute w-100" style="top: 100%; left: 0; z-index: 10;"></ul>
-                        <div id="noResults" class="alert alert-warning" style="display: none;">No se encontraron resultados.</div>
-                    </div>
-                </form>
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active text-white mx-4" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white mx-4" data-bs-toggle="modal" data-bs-target="#modalacceder" href="#">Acceder</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-outline-secondary nav-link boton-custom text-white mx-2" href="/Pages/registro.html">Registrarse</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <nav class="nav navbar ">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <a href="/Index.html" class="logo"><img src="/img/logo-blanco.png" alt=""></a>
+        
+        <ul class="nav-links my-1">
+          <i class="uil uil-times navCloseBtn"></i>
+          <li><a href="/Index.html">Inicio</a></li>
+          <li><a href="#" data-bs-toggle="modal" data-bs-target="#modalacceder">Acceder</a></li>
+          <li><a href="/Pages/registro.html">Registro</a></li>
+        </ul>
+        <!-- buscador -->
+        <i class="uil uil-search search-icon" id="searchIcon"></i>
+        <div class="search-box">
+          <i class="uil uil-search search-icon"></i>
+          <input class="form-control inputbuscar" id="searchInput" type="search" placeholder="Buscar canciones, artistas" aria-label="Buscar">
+              <ul id="resultsList" class="list-group position-absolute w-100" style="top: 100%; left: 0; z-index: 10;"></ul>
+              <div id="noResults" class="alert alert-warning" style="display: none;">No se encontraron resultados.</div>
+        </div>        
     </nav>
+    <!-- modal acceder -->
     <div class="modal fade" id="modalacceder" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalaccederLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content contenedor bg-transparent">
+          <div class="modal-content contenedor border-0 bg-transparent">
             <div class="formu">
                 <!-- ver color de boton -->
                 <!-- <button type="button" class="bx bx-x-circle position-absolute top-0 end-0 cerrar" data-bs-dismiss="modal" aria-label="Close"></button>  -->
@@ -70,11 +62,11 @@
                         <h2>Inicia Sesion</h2>
                         <p id="resultado"></p>
                     <div class="input">
-                        <i class="bx bxs-user cerrar"></i>
+                        <i class="bx bxs-user"></i>
                         <input type="text" name="Usuario" placeholder="Usuario">
                     </div>
                     <div class="input">
-                        <i class='bx bx-show-alt cerrar cont'></i>
+                        <i class='bx bx-show-alt cont'></i>
                         <input type="password" name="Contraseña" placeholder="Contraseña" class="pass" id="pass">
                     </div>
                     <div class="grupo">
@@ -402,54 +394,44 @@
                 <h4>Conocenos</h4>
                 <ul class="links">
                     <li><a href="/Pages/acerca-nosotros.html">Nosotros</a></li>
-                    <li><a href="#">Compresiones</a></li>
-                    <li><a href="#">Clientes</a></li>
-                    <li><a href="#">Servicio</a></li>
-                    <li><a href="#">Colección</a></li>
+                    <li><a href="/Pages/contacto.html">Contactanos</a></li>
                 </ul>
             </div>
     
             <div class="footer-col">
                 <h4>Explora</h4>
                 <ul class="links">
-                    <li><a href="#">Canciones Gratis</a></li>
-                    <li><a href="#">Últimas Canciones</a></li>
-                    <li><a href="#">Géneros</a></li>
-                    <li><a href="#">Canciones Populares</a></li>
-                    <li><a href="#">Talentos Musicales</a></li>
-                    <li><a href="#">Nuevos Lanzamientos</a></li>
+                    <li><a href="/Pages/Error-404.html">Canciones Gratis</a></li>
+                    <li><a href="/Pages/Error-404.html">Últimas Canciones</a></li>
+                    <li><a href="/Pages/Error-404.html">Géneros</a></li>
+                    <li><a href="/Pages/Error-404.html">Nuevos Lanzamientos</a></li>
                 </ul>
             </div>
     
             <div class="footer-col">
                 <h4>Legal</h4>
                 <ul class="links">
-                    <li><a href="#">Terminos y Condiciones</a></li>
-                    <li><a href="#">Política de Privacidad</a></li>
-                    <li><a href="#">Copyright</a></li>
-                    <li><a href="#">Seguridad y Confianza</a></li>
-                    <li><a href="#">Testimonios de Nuestros Oyentes</a></li>
-                    <li><a href="#">Planes y Suscripciones</a></li>
+                    <li><a href="/Pages/terminos.html">Terminos y Condiciones</a></li>
+                    <li><a href="/Pages/politicas.html">Política de Privacidad</a></li>
+                    <li><a href="/Pages/cookies.html">Cookies</a></li>
+                    <li><a href="/Pages/Error-404.html">Planes y Suscripciones</a></li>
                 </ul>
             </div>
     
             <div class="footer-col">
-                <h3></h3>
+                <h4>Redes</h4>
                 <p></p>
                 <div class="redes-icons">
-                    <a href="https://github.com">
-                        <img src="./img/github.png" alt="GitHub">
-                    </a>
-                    <a href="https://twitter.com">
+                    <a href="/Pages/Error-404.html">
                         <img src="./img/twitter-alt.png" alt="Twitter">
                     </a>
-                    <a href="https://www.tiktok.com">
+                    <a href="/Pages/Error-404.html">
                         <img src="./img/tik-tok.png" alt="TikTok">
                     </a>
-                    <a href="https://telegram.org">
+                    <a href="/Pages/Error-404.html">
                         <img src="./img/facebook.png" alt="Telegram">
                     </a>
-                    <a href="https://www.instagram.com">
+                    <a href="/Pages/Error-404.html">
                         <img src="./img/instagram.png" alt="Instagram">
                     </a>
                     
