@@ -27,10 +27,11 @@ body {
 }
 
 .acerca-de-grupal img {
-    width: 350px;
+    width: 650px;
     margin-left: 20px;
     border-radius: 0 10px 10px 0;
     transition: ease all .5s;
+    margin-bottom: 30px;
 }
 
 .acerca-de-grupal .texto {
@@ -38,25 +39,28 @@ body {
     transition: ease all .5s;
 }
 
+.nombre-grupo {
+    color: white;
+    font-size: 3rem;
+    width: 450px;
+    height: 75px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.456);
+    margin-bottom: 30px;
+}
+
 .acerca-de-grupal .texto {
     p {
         width: 450px;
-        margin-bottom: 0;
-        color: rgba(255, 255, 255, 0.484);
-    }
-    
-    h2 {
-        color: white;
-        font-size: 3rem;
-        width: 450px;
-        height: 75px;
-        border-bottom: 2px solid rgba(255, 255, 255, 0.456);
+        margin-bottom: 20px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        text-shadow: rgb(0, 0, 0);
     }
 }
 
 .separador {
     width: 70%;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.085);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.456);
     padding-bottom: 30px;
 }
 

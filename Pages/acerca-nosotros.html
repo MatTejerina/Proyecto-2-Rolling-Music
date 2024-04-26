@@ -33,24 +33,24 @@
           <input class="form-control inputbuscar" id="searchInput" type="search" placeholder="Buscar canciones, artistas" aria-label="Buscar">
     
                         <!-- Contenedor para la lista de resultados -->
-                        <ul id="resultsList" class="list-group position-absolute w-100" style="top: 100%; left: 0; z-index: 10;"></ul>
+                      <ul id="resultsList" class="list-group position-absolute w-100" style="top: 100%; left: 0; z-index: 10;"></ul>
     
                         <!-- Mensaje para cuando no hay resultados -->
-                        <div id="noResults" class="alert alert-warning" style="display: none;">No se encontraron resultados.</div>
+                      <div id="noResults" class="alert alert-warning" style="display: none;">No se encontraron resultados.</div>
                     
           <!-- <input class="insearch" type="text" placeholder="Buscar canción..." /> -->
         </div>        
     </nav>
-<!-- Modal de acceder -->  
-
-<div class="modal fade" id="modalacceder" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalaccederLabel" aria-hidden="true">
+  <!-- Modal de acceder -->  
+  
+  <div class="modal fade" id="modalacceder" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalaccederLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content contenedor bg-transparent">
       <div class="formu">
           <!-- ver color de boton -->
           <!-- <button type="button" class="bx bx-x-circle position-absolute top-0 end-0 cerrar" data-bs-dismiss="modal" aria-label="Close"></button>  -->
           <i class='bx bx-x-circle bxicon position-absolute top-0 end-0 cerrar' data-bs-dismiss="modal" aria-label="Close"></i>
-          <form action="" name="Formu" onsubmit="return validacion()">
+          <form action="" name="Formu" onsubmit="return validacion()" id="loginForm">
               <div class="position-absolute top-0 start-50 translate-middle">
                   <img src="../img/logo-blanco.png" class="mt-5 pt-5" alt="" width="150px">
               </div>
@@ -58,7 +58,7 @@
                   <p id="resultado"></p>
               <div class="input">
                   <i class="bx bxs-user bxicon"></i>
-                  <input type="text" name="Usuario" placeholder="Usuario">
+                  <input type="text" name="Usuario" placeholder="Usuario" id="name">
               </div>
               <div class="input">
                   <i class='bx bx-show-alt cont bxicon'></i>
@@ -74,7 +74,7 @@
                   </div>
               </div>
               <div class="boton">
-                  <input type="submit" class="boton" value="Iniciar Sesion">
+                  <input type="submit" class="boton" value="Iniciar Sesion" id="submit">
               </div>
           </form>
       </div>
@@ -100,13 +100,17 @@
   </div>
 
     <section class="acerca-de-grupal d-flex flex-column align-items-center">
-        <div class="contenedor-objetos d-flex justify-content-center align-items-center">
-            <div class="texto d-flex flex-column align-items-end">
-                <h2>Nombre del Grupo</h2>
-                <p>RIPPLE está formado por amantes de la música y expertos en tecnología que trabajan día a día para brindarte un servicio de calidad y una experiencia única. Nos esforzamos por ofrecerte la mejor selección de canciones, recomendaciones personalizadas y una interfaz intuitiva para que puedas navegar y descubrir nueva música de forma sencilla.</p>
-            </div>
-            <div>
-                <img src="/img/Grupal.jpeg" alt="Foto de Grupo">
+        <div class="contenedor-objetos d-flex flex-column justify-content-center align-items-center">
+            <h2 class="nombre-grupo">Nombre del Grupo</h2>
+            <div class="texto-foto-1 d-flex flex-column align-items-center">
+                <div>
+                    <img src="/img/Grupal.jpeg" alt="Foto de Grupo">
+                </div>
+                <div class="texto d-flex flex-column align-items-end">
+                    
+                    <p>RIPPLE está formado por amantes de la música y expertos en tecnología que trabajan día a día para brindarte un servicio de calidad y una experiencia única. Nos esforzamos por ofrecerte la mejor selección de canciones, recomendaciones personalizadas y una interfaz intuitiva para que puedas navegar y descubrir nueva música de forma sencilla.</p>
+                </div>
+                
             </div>
         </div>
         <div class="separador"></div>
@@ -220,47 +224,57 @@
     </section>
 
    <!-- Footer -->
-   <footer class="footer">
+   <footer class="footer fade-in">
     <div class="footer-row">
-      <div class="footer-col">
-        <h4>Conocenos</h4>
-        <ul class="links">
-          <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Contactanos</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-col">
-        <h4>Explora</h4>
-        <ul class="links">
-          <li><a href="#">Canciones Gratis</a></li>
-          <li><a href="#">Últimas Canciones</a></li>
-          <li><a href="#">Géneros</a></li>
-          <li><a href="#">Nuevos Lanzamientos</a></li>
-            
-          </ul>
-      </div>
-        
-      <div class="footer-col">
-          <h4>Legal</h4>
-          <ul class="links">
-            <li><a href="#">Terminos y Condiciones</a></li>
-            <li><a href="#">Política de Privacidad</a></li>
-            <li><a href="#">Cookies</a></li>
-          </ul>
-      </div>
-        
-      <div class="footer-col">
-          <h4>Redes</h4>
-          <div class="footer_social_area redes">
-            <a href="#" title="Facebook"><i class="fa fa-facebook iconredes"></i></a>
-            <a href="#" title="Skype"><i class="fa fa-instagram iconredes"></i></a>
-            <a href="#" title="Twitter"><i class="fa fa-twitter iconredes"></i></a>
-            <a href="#" title="Twitter"><i class="fa fa-youtube iconredes"></i></a>
+        <div class="footer-col">
+            <h4>Conocenos</h4>
+            <ul class="links">
+                <li><a href="/Pages/acerca-nosotros.html">Nosotros</a></li>
+                <li><a href="/Pages/contacto.html">Contactanos</a></li>
+            </ul>
         </div>
-      </div>
+
+        <div class="footer-col">
+            <h4>Explora</h4>
+            <ul class="links">
+                <li><a href="/Pages/Error-404.html">Canciones Gratis</a></li>
+                <li><a href="/Pages/Error-404.html">Últimas Canciones</a></li>
+                <li><a href="/Pages/Error-404.html">Géneros</a></li>
+                <li><a href="/Pages/Error-404.html">Nuevos Lanzamientos</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Legal</h4>
+            <ul class="links">
+                <li><a href="/Pages/terminos.html">Terminos y Condiciones</a></li>
+                <li><a href="/Pages/politicas.html">Política de Privacidad</a></li>
+                <li><a href="/Pages/cookies.html">Cookies</a></li>
+                <li><a href="/Pages/Error-404.html">Planes y Suscripciones</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Redes</h4>
+            <p></p>
+            <div class="redes-icons">
+                <a href="/Pages/Error-404.html">
+                    <img src="/img/twitter-alt.png" alt="Twitter">
+                </a>
+                <a href="/Pages/Error-404.html">
+                    <img src="/img/tik-tok.png" alt="TikTok">
+                </a>
+                <a href="/Pages/Error-404.html">
+                    <img src="/img/facebook.png" alt="Telegram">
+                </a>
+                <a href="/Pages/Error-404.html">
+                    <img src="/img/instagram.png" alt="Instagram">
+                </a>
+                
+            </div>
+        </div>
     </div>
-</footer>      
+</footer>
   
     <script src="/JavaScript/" defer></script><!-- cambiar link -->
 
