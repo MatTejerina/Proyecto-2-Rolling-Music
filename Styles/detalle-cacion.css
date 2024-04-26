@@ -4,11 +4,14 @@
 
 body {
     background: url(https://images.hdqwalls.com/wallpapers/the-marshmello-yu.jpg);
-    /* background:linear-gradient(90deg, rgba(46, 0, 78, 0.482), rgba(255, 0, 150, 0.3)), url(https://images.hdqwalls.com/wallpapers/the-marshmello-yu.jpg); */
     background-size: cover;
-    /* background-position: center; */
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .8s;
 }
 
 h1, h2, h3, h4, h5, p, a {
@@ -25,14 +28,15 @@ a {
     text-decoration: none !important;
 }
 
-.descripcion-detalle {
-    transition: 0.6s;
-}
-
 .section {
   padding: 0 3rem;
   margin-top: 150px;
 }
+
+.descripcion-detalle {
+    transition: 0.6s;
+}
+
 
 .descripcion-detalle .titulo {
     font-size: 10rem !important;
@@ -136,6 +140,15 @@ a {
     transform: scale(0.95);
 }
 /*! ----------------- */
+
+@media only screen and (max-width: 900px) {
+    body {
+        background: linear-gradient(0deg, rgba(0,0,0,.6) 0%, rgba(21, 2, 48, 0.7) 100%), url(https://images.hdqwalls.com/wallpapers/the-marshmello-yu.jpg) !important;
+        background-position: center !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+    }
+}
 
 @media only screen and (min-width: 600px) {
     .section {

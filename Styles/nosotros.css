@@ -1,7 +1,13 @@
+html {
+    width: 100vw;
+}
+
 body {
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(37,0,89,1) 100%) !important;
-    background: none;
-    width: 100% !important;
+    background: linear-gradient(0deg, rgba(0,0,0,.6) 0%, rgba(37,0,89,.7) 100%), url(https://cdn.pixabay.com/photo/2023/03/16/16/31/dj-7857067_1280.jpg) !important;
+    background-size: cover !important;
+    min-width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
 }
 
 .acerca-de {
@@ -17,7 +23,7 @@ body {
 }
 
 .acerca-de-grupal {
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 .acerca-de-grupal img {
@@ -70,11 +76,18 @@ body {
     .acerca-de-grupal .texto {
         text-align: center;
     }
+
+    .acerca-de-grupal {
+        margin-top: 20px;
+        margin-bottom: -0;
+    }
 }
 
 @media only screen and (max-width: 600px) {
-    .acerca-de-grupal .texto {
+    .acerca-de-grupal {
         transform: scale(.8);
+        margin-top: -40px;
+        margin-bottom: -40px;
     }
 
     .tarjeta {
@@ -87,7 +100,7 @@ body {
 }
 
 .staff .ripple {
-    color: rgba(255, 255, 255, 0);
+    color: rgba(181, 21, 21, 0);
     font-weight: 800;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(255, 255, 255);
@@ -138,7 +151,7 @@ body {
 }
 .card_1 .back{
     backface-visibility: hidden;
-    background: rgb(23, 0, 44);
+    background: linear-gradient(0deg, rgb(34, 0, 45) 0%, rgba(133,0,209,1) 100%);
     color: #fff;
     position: absolute;
     width: 100%;
@@ -165,7 +178,7 @@ body {
     font-size: 50px;
     font-weight: 800;
 }
-.card_1 .back p{
+.card_1 .back p {
     width: 90%;
     color: rgba(255, 255, 255, 0.447);
     font-size: 25px;
@@ -184,7 +197,7 @@ body {
     height: 40px;
     line-height: 40px;
     font-size: 18px;
-    background: #000000;
+    background: #00000041;
     border-radius: 50%;
     margin: 25px 6px; 
     padding: 10px; 
@@ -193,7 +206,8 @@ body {
 
 .card_1:hover .card_inner{
     transform: rotateY(-180deg);
-    box-shadow: 0px 10px 250px 15px rgba(74, 0, 159, 0.39);
+    border-radius: 20px;
+    box-shadow: 0px 10px 250px 15px rgba(74, 0, 159, 0.548);
 }
 
 .card_1 .social .icon:hover {
