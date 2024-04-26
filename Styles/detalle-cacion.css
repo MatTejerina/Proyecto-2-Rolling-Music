@@ -1,0 +1,178 @@
+* {
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background: url(https://images.hdqwalls.com/wallpapers/the-marshmello-yu.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .8s;
+}
+
+h1, h2, h3, h4, h5, p {
+    color: #fff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.datos-1 p{
+    color: rgba(255, 255, 255, 0.733) !important;
+}
+
+a {
+    text-decoration: none !important;
+    color: #fff;
+}
+
+.section {
+  padding: 0 3rem;
+  margin-top: 150px;
+}
+
+.descripcion-detalle {
+    transition: 0.6s;
+}
+
+
+.descripcion-detalle .titulo {
+    font-size: 10rem !important;
+    font-weight: 900;
+}
+
+.descripcion-detalle .autor {
+    font-size: 4rem !important;
+    font-weight: 500;
+}
+
+.descripcion-detalle h4 {
+    line-height: 40px;
+}
+
+/**Estrellas*/
+
+.estrella {
+    font-size: 32px;
+    color: #ddd;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.estrella:hover {
+    color: gold;
+}
+
+.estrella.checked {
+    color: gold;
+}
+
+/**Estrellas*/
+
+.descripcion {
+    width: 400px;
+    margin: 10px 0 10px 0 !important;
+    font-weight: 200;
+}
+
+.codigo{
+    color: rgba(255, 255, 255, 0.518) !important;
+    font-weight: 100;
+}
+
+/*! boton-reproductor */
+.cssbuttons-io-button {
+    width: 200px;
+    margin-top: 10px;
+    position: relative;
+    background: none;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 2em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.2em -0.6em #1dadcc;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 2em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em rgba(29, 172, 204, 0.411);
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #1dadcc;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+}
+/*! ----------------- */
+
+@media only screen and (max-width: 900px) {
+    body {
+        background: linear-gradient(0deg, rgba(0,0,0,.6) 0%, rgba(21, 2, 48, 0.7) 100%), url(https://images.hdqwalls.com/wallpapers/the-marshmello-yu.jpg) !important;
+        background-position: center !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .section {
+        justify-content: start;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+  .descripcion-detalle {
+    transform: scale(.8);  
+  }
+
+  .section {
+    margin-top: 40px;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+    .descripcion-detalle {
+        transform: scale(.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+}

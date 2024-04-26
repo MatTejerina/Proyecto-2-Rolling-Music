@@ -1,6 +1,6 @@
 // cambiar apiKey o solicitar un token para que funcione sino no funciona la API
 
-const apiKey = 'BQCh2sEsJyDwDPB_QK_qDuCpPzyFeFJ-S4xtgN_joN99EmFbit4ZhQEPSyxibfrZq0Gj8S5zBfoNtTnh7S8Lr9XbrGBmvO9BkPCmcvRZyDgNojXB_69SSjetQYVmF76HcPgUi_VTbY83Gp4bZ4PV1pagwWf6sdMxJ_b4tdJkTBXZaDELW9_JKoYVqOUsoTQdTK-7SfOysBWjKX32DQkma3_DAiUR6ejK17JXFN3IcaKgo7sE9LNNUqgG2_cMPBg-gg';
+// const apiKey = 'BQD2RRZ0I8NVbjszQvjmcNhFvAk0iNmIKR0tiFOEWk6r_vWZVsGCLyDyDm9iRUQltfpG6tvlpEAws4SvoOZQ0p0Zvjc903OF2_F2DwaU-Zrg_mkedx6pmnAobqAdn2q4Uic9D5bKQfc3NvWXHLyl3EQraUOKXJ6Tlh2syTmnbRm3naq-a2MA_T0mA5nL8J64cFAcLqJRb6LzkG9fb3z9mQOEUVrpBgkLBrtb15br9bULAf8-Go3agwzPp6OEmWuj3Q';
 
 const audioPlayer = new Audio();
 audioPlayer.volume = 0.1;
