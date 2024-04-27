@@ -35,6 +35,8 @@ if (storedRating) {
   updateStarRating(storedRating);
 }
 
+
+
 // buscador visible
 const nav = document.querySelector(".nav"),
   searchIcon = document.querySelector("#searchIcon"),
@@ -68,34 +70,60 @@ recuerdame.addEventListener('click', function(event) {
     checkout.checked = !checkout.checked;
 })
 
+// Validar acceder
 function validacion() {
-    var usuario = document.Formu.Usuario.value;
-    var contraseña = document.Formu.Contraseña.value;
+    let usuario = document.Formu.Usuario.value;
+    let contraseña = document.Formu.Contraseña.value;
 
-    if (document.Formu.Usuario.value == "") {
+    if (usuario === "") {
         document.getElementById("resultado").innerHTML = "Ingresa un Usuario*";
         return false;        
-    }else if (document.Formu.Usuario.value.length < 6) {
+    } else if (usuario.length < 6) {
         document.getElementById("resultado").innerHTML = "Mínimo 6 caracteres*";
         return false;
-    }else if (document.Formu.Contraseña.value == "") {
+    } else if (contraseña === "") {
         document.getElementById("resultado").innerHTML = "Ingresa una Contraseña*";
         return false;
-    } else if (document.Formu.Contraseña.value.length < 6) {
+    } else if (contraseña.length < 6) {
         document.getElementById("resultado").innerHTML = "Contraseña de 6 caracteres*";
         return false;
     } else if (usuario === "admin1" && contraseña === "123123") {
-        window.location.href = "../Pages/pag-adm.html";
+        sessionStorage.setItem("loggedInUser", "admin1");
+        window.location.href = "/Index.html";
         return false;
     } else if (usuario === "matias" && contraseña === "123123") {
-        window.location.href = "../Pages/adm-usu.html";
+        sessionStorage.setItem("loggedInUser", "matias");
+        window.location.href = "../Pages/detalle-cancion.html";
         return false;
     } else {
         document.getElementById("resultado").innerHTML = "Usuario o contraseña incorrectos";
         return false;
     }
-    
 }
+
+// Mostrar las sesiones
+document.addEventListener("DOMContentLoaded", function() {
+    const loggedInUser = sessionStorage.getItem("loggedInUser");
+    
+    if (loggedInUser === "admin1") {
+        document.querySelectorAll(".adminBtn").forEach(btn => btn.style.display = "block");
+        document.querySelectorAll(".indexbtn").forEach(btn => btn.style.display = "none");
+    } else if (loggedInUser === "matias") {
+        document.querySelectorAll(".adminBtn").forEach(btn => btn.style.display = "none");
+        document.querySelectorAll(".usubtn").forEach(btn => btn.style.display = "block");
+        document.querySelectorAll(".indexbtn").forEach(btn => btn.style.display = "none");
+    } else {
+        // Si no hay usuario en sesión, ocultar botones administrativos
+        document.querySelectorAll(".adminBtn").forEach(btn => btn.style.display = "none");
+    }
+});
+
+// cerrar sesion y borrar sessionStore
+document.getElementById("cerrarSesionBtn").addEventListener("click", function() {
+    sessionStorage.removeItem("loggedInUser");
+    window.location.href = "/Index.html";
+});
+
 
 // visualizar contraseñas
 const pass = document.getElementById("pass");

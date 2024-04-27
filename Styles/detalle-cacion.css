@@ -19,6 +19,9 @@ h1, h2, h3, h4, h5, p {
     margin: 0 !important;
     padding: 0 !important;
 }
+.adminBtn{
+    display: none;
+}
 
 .datos-1 p{
     color: rgba(255, 255, 255, 0.733) !important;

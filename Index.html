@@ -21,8 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     <!-- Icinos boxcoins -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
     <!-- Titulo -->
     <title>RIPPLE</title>
 </head>
@@ -34,9 +33,11 @@
         
         <ul class="nav-links my-1">
           <i class="uil uil-times navCloseBtn"></i>
-          <li><a href="/Index.html">Inicio</a></li>
-          <li><a href="#" data-bs-toggle="modal" data-bs-target="#modalacceder">Acceder</a></li>
-          <li><a href="/Pages/registro.html">Registro</a></li>
+          <li class="adminBtn"><a href="/Pages/pag-adm.html">Administracion</a></li>
+          <li class="usubtn"><a href="/Index.html">Inicio</a></li>
+          <li class="adminBtn usubtn"><a id="cerrarSesionBtn" href="/Index.html">Cerrar sesion</a></li>
+          <li class="indexbtn"><a href="#" data-bs-toggle="modal" data-bs-target="#modalacceder">Acceder</a></li>
+          <li class="indexbtn"><a href="/Pages/registro.html">Registro</a></li>
         </ul>
         <!-- buscador -->
         <i class="uil uil-search search-icon" id="searchIcon"></i>
@@ -52,8 +53,6 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content contenedor border-0 bg-transparent">
             <div class="formu">
-                <!-- ver color de boton -->
-                <!-- <button type="button" class="bx bx-x-circle position-absolute top-0 end-0 cerrar" data-bs-dismiss="modal" aria-label="Close"></button>  -->
                 <i class='bx bx-x-circle position-absolute top-0 end-0 cerrar' data-bs-dismiss="modal" aria-label="Close"></i>
                 <form action="" name="Formu" onsubmit="return validacion()">
                     <div class="position-absolute top-0 start-50 translate-middle">
@@ -114,7 +113,7 @@
                         <h6 class="fond-h6-2"><strong class="fond-h6">Fecha de lanzamiento:</strong> 2024</h6>
                         <h6 class="fond-h6-2"><strong class="fond-h6">Álbum:</strong> MELLODEATH Tapes Vol.1</h6>
                         <h6 class="fond-h6-2"><strong class="fond-h6">Género:</strong> Dance/Electrónica</h6>
-                        <a href="/Pages/detalle-cancion.html" class="play-button">VER</a>
+                        <a href="/Pages/detalle-cancion.html" class="play-button adminBtn usubtn">VER</a>
                     </div>
                 </div>
             </div>

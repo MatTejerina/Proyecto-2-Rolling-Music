@@ -9,6 +9,10 @@ body {
     margin: 0;
     box-sizing: border-box;
 }
+/* ocultar botones */
+.adminBtn{
+  display: none;
+}
 /* navbar */
   
 .nav {
@@ -246,6 +250,7 @@ h2 strong {
 /* boton-reproductor */
 .play-button {
     padding: 5px 40px;
+    width: 110px;
     background: white;
     color: rgb(0, 0, 0);
     border: none;
