@@ -30,10 +30,10 @@ recuerdame.addEventListener('click', function(event) {
     event.preventDefault();
     checkout.checked = !checkout.checked;
 })
-
+// validar acceder
 function validacion() {
-    var usuario = document.Formu.Usuario.value;
-    var contraseña = document.Formu.Contraseña.value;
+    let usuario = document.Formu.Usuario.value;
+    let contraseña = document.Formu.Contraseña.value;
 
     if (document.Formu.Usuario.value == "") {
         document.getElementById("resultado").innerHTML = "Ingresa un Usuario*";
@@ -56,8 +56,7 @@ function validacion() {
     } else {
         document.getElementById("resultado").innerHTML = "Usuario o contraseña incorrectos";
         return false;
-    }
-    
+    }    
 }
 
 // visualizar contraseñas

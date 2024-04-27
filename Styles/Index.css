@@ -340,7 +340,7 @@ h2 strong {
 .card img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-start-end-radius: 10px;
 }
 
 .card-content {

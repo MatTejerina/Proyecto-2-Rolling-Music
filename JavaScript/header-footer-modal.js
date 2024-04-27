@@ -121,8 +121,8 @@ recuerdame.addEventListener('click', function(event) {
 })
 
 function validacion() {
-    var usuario = document.Formu.Usuario.value;
-    var contraseña = document.Formu.Contraseña.value;
+    let usuario = document.Formu.Usuario.value;
+    let contraseña = document.Formu.Contraseña.value;
 
     if (document.Formu.Usuario.value == "") {
         document.getElementById("resultado").innerHTML = "Ingresa un Usuario*";

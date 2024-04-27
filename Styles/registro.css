@@ -1,9 +1,9 @@
 body{
-    background-image: url(../img/registro.jpg);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/registro.jpg);
+    background-image: url(../img/registro1.jpeg);
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/registro.jpg); */
     position: relative;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;    
 }
 
 /* registro */
@@ -12,6 +12,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 50px;
+    padding-top: 30px;
 }
 
 .formulario{    

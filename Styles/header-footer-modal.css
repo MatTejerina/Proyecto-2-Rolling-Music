@@ -470,12 +470,10 @@ display: none;
 
 @media (max-width: 768px) {
   .footer {
-    position: relative;
+    position: static;
     bottom: 0;
-    left: 0;
     transform: none;
     width: 100%;
-    margin-top: 50px;
   }
 
   .footer .footer-row {
@@ -495,3 +493,11 @@ display: none;
     margin: 10px 0 0 0;
   }
 }
+
+/* padding-top: 30px;
+width: 100%;
+background: #10182f96;
+border-radius: 6px;
+margin-top: 50px;
+bottom: 0;
+position: static; */
