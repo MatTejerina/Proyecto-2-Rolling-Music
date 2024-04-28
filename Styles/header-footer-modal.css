@@ -192,6 +192,7 @@
 }
 input::placeholder{
   color: #fff;
+  background: none;
 }
 .boton{
   color: #fff;

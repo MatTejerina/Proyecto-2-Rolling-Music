@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     <!-- Icinos boxcoins -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <title>Contacto</title>
     
 </head>
@@ -58,7 +58,7 @@
                     <p id="resultado"></p>
                 <div class="input">
                     <i class="bx bxs-user"></i>
-                    <input type="text" name="Usuario" placeholder="Usuario">
+                    <input autocomplete="off" type="text" name="Usuario" placeholder="Usuario">
                 </div>
                 <div class="input">
                     <i class='bx bx-show-alt cont'></i>
@@ -81,7 +81,7 @@
     </div>
 </div>
 </div>
-
+<!-- modal recuperar contraseña -->
   <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -91,33 +91,17 @@
                 </div>
             <h2>¿Olvido su contraseña?</h2>
             <p>Por favor, introduzca su email y le enviaremos un correo para recuperar su contraseña</p>
-            <input type="email" name="Email" placeholder="Introduce tu Mail">
+            <input autocomplete="off" type="email" name="Email" placeholder="Introduce tu Mail">
             <a href="#"><button>RECUPERAR CONTRASEÑA</button></a>
             <a href="#" data-bs-target="#modalacceder" data-bs-toggle="modal">Volver</a>
         </div>
       </div>
     </div>
   </div>
-    
-      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="position-absolute top-50 start-50 translate-middle recuperar border-white" id="Recuperar">
-                    <div class="imagen">
-                    <img src="../img/logo-blanco.png" alt="" width="150px">
-                    </div>
-                <h2>¿Olvido su contraseña?</h2>
-                <p>Por favor, introduzca su email y le enviaremos un correo para recuperar su contraseña</p>
-                <input type="email" name="Email" placeholder="Introduce tu Mail">
-                <a href="#"><button>RECUPERAR CONTRASEÑA</button></a>
-                <a href="#" data-bs-target="#modalacceder" data-bs-toggle="modal">Volver</a>
-            </div>
-          </div>
-        </div>
-      </div>
     <main>
-        <form action="" name="Contacto" onsubmit="return validacion()" class="form">
+        <form action="" name="Contacto" onsubmit="return validacionC()" class="form">
             <h2 class="form_title">Contacta con nosotros</h2>
+            <p class="error" id="resultadoC"></p>
             <div class="form_container">
                 <div class="form_group">
                     <input type="text" name="name" class="form_input" placeholder=" ">
@@ -150,7 +134,7 @@
             <div class="footer-col">
                 <h4>Conocenos</h4>
                 <ul class="links">
-                    <li><a href="/Pages/acerca-nosotros.html">Nosotros</a></li>
+                    <li><a href="/Pages/nosotros.html">Nosotros</a></li>
                     <li><a href="/Pages/contacto.html">Contactanos</a></li>
                 </ul>
             </div>

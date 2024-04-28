@@ -418,6 +418,13 @@ main {
     border-bottom: 1px solid #293c7c;
     font-family: var(--letra);
 }
+.error {
+  color: red;
+  font-weight: 600;
+  position: relative;
+  top: 1px;
+  height: 1em;
+}
 
 .form_input:focus+.form_label,
 .form_input:not(:placeholder-shown)+.form_label {

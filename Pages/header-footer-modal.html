@@ -20,11 +20,10 @@
     <!-- Titulo -->
   </head>
 
-  <body>
+  <body class="bg-danger">
     <nav class="nav">
         <i class="uil uil-bars navOpenBtn"></i>
-        <a href="#" class="logo"><img src="/img/logo-blanco.png" alt=""></a>
-        
+        <a href="#" class="logo"><img src="/img/logo-blanco.png" alt=""></a>       
         <ul class="nav-links my-1">
           <i class="uil uil-times navCloseBtn"></i>
           <li><a href="#">Inicio</a></li>
@@ -36,24 +35,16 @@
         <div class="search-box">
           <i class="uil uil-search search-icon"></i>
           <input class="form-control inputbuscar" id="searchInput" type="search" placeholder="Buscar canciones, artistas" aria-label="Buscar">
-    
-                        <!-- Contenedor para la lista de resultados -->
-                        <ul id="resultsList" class="list-group position-absolute w-100" style="top: 100%; left: 0; z-index: 10;"></ul>
-    
-                        <!-- Mensaje para cuando no hay resultados -->
-                        <div id="noResults" class="alert alert-warning" style="display: none;">No se encontraron resultados.</div>
-                    
-          <!-- <input class="insearch" type="text" placeholder="Buscar canción..." /> -->
+            <ul id="resultsList" class="list-group position-absolute w-100" style="top: 100%; left: 0; z-index: 10;"></ul>
+            <div id="noResults" class="alert alert-warning" style="display: none;">No se encontraron resultados.</div>
         </div>        
     </nav>
-<!-- Modal de acceder -->  
 
+<!-- Modal de acceder -->
 <div class="modal fade" id="modalacceder" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalaccederLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content contenedor bg-transparent">
+    <div class="modal-content contenedor bg-transparent border-0">
       <div class="formu">
-          <!-- ver color de boton -->
-          <!-- <button type="button" class="bx bx-x-circle position-absolute top-0 end-0 cerrar" data-bs-dismiss="modal" aria-label="Close"></button>  -->
           <i class='bx bx-x-circle bxicon position-absolute top-0 end-0 cerrar' data-bs-dismiss="modal" aria-label="Close"></i>
           <form action="" name="Formu" onsubmit="return validacion()">
               <div class="position-absolute top-0 start-50 translate-middle">

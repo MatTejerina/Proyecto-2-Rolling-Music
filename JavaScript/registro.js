@@ -1,6 +1,6 @@
 function validacion() {
     let expresionCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    let soloLetras = /^[a-zA-Z\s]*$/;
+    let soloLetras = /^[ñÑa-zA-Z\s]*$/;
 
     let usuario = document.Formu.Usuario.value;
     let email = document.Formu.Email.value;
@@ -51,13 +51,6 @@ function validacion() {
         document.getElementById("resultado").innerHTML = "Debes aceptar los términos y condiciones*";
         return false;
     }
-
-    let loggedInUser = {
-        usuario: usuario
-    };
-
-    localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
-
     mensaje.classList.add("abrir-mensaje");
     enviarMail();
     

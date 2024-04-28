@@ -161,4 +161,50 @@ document.getElementById("cerrarSesionBtn").addEventListener("click", function() 
     sessionStorage.removeItem("loggedInUser");
     window.location.href = "/Index.html";
 });
+// validar formulario y enviar mail
 
+function validacionC(){
+    let name = document.Contacto.name.value;
+    let tel = document.Contacto.tel.value;
+    let mail = document.Contacto.mail.value;
+    let comentarios = document.Contacto.textarea.value;
+
+    if (name === ""){
+        document.getElementById("resultadoC").innerHTML = "Ingresa tu nombre*";
+        return false;
+    } else if (tel === ""){
+        document.getElementById("resultadoC").innerHTML = "Ingresa un Telefono*";
+        return false;
+    } else if (mail === ""){
+        document.getElementById("resultadoC").innerHTML = "Ingresa un Mail*";
+        return false;
+    } else if (comentarios === ""){
+        document.getElementById("resultadoC").innerHTML = "Ingresa un Comentario*";
+        enviarMail();
+        return false;
+    }
+}
+// enviar mail
+
+function enviarMail() {
+    let name = document.Contacto.name.value;
+    let tel = document.Contacto.tel.value;
+    let mail = document.Contacto.mail.value;
+    let comentarios = document.Contacto.textarea.value;
+
+    const cuerpoCorreo = 
+        `Nombre: ${name}<br>
+        Telefono: ${tel}<br>
+        Email: ${mail}<br>
+        Comentario: ${comentarios}<br>`;
+   
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "hache.83@gmail.com",
+        Password : "9812628575310C1BA59903F37E847C50FFC9",
+        To : 'tejerinamatias83@gmail.com',
+        From : "hache.83@gmail.com",
+        Subject : "Nuevo Comentario" ,
+        Body : cuerpoCorreo
+    });
+}

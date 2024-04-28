@@ -125,7 +125,7 @@ input::placeholder{
 }
 .mensaje{
     width: 450px;
-    background-color: #ffffff;
+    background-color: transparent;
     border-radius: 10px;
     position: absolute;
     top: 0;
@@ -134,7 +134,7 @@ input::placeholder{
     padding: 0 30px 30px;
     height: 330px;
     color: #000;
-    /* backdrop-filter: blur(1500px); */    
+    backdrop-filter: blur(300px); 
 }
 
 .mensaje h2{
