@@ -122,4 +122,25 @@ function enviarMail() {
         Body : cuerpoCorreo
     });
 }
-    
+
+
+// Selecciona el elemento que se observará
+const targetNode = document.getElementById('mensaje');
+
+// Crea un nuevo observador de mutaciones
+const observer = new MutationObserver(function(mutationsList) {
+    mutationsList.forEach(function(mutation) {
+        if (mutation.attributeName === 'class') {
+            if (targetNode.classList.contains('abrir-mensaje')) {
+                form.classList.add('blur');
+            } else {
+                form.classList.remove('blur');
+            }
+        }
+    });
+});
+
+// Configura y comienza a observar el elemento
+const config = { attributes: true };
+observer.observe(targetNode, config);
+

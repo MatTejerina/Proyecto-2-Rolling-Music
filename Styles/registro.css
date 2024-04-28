@@ -1,9 +1,17 @@
+html {
+    min-width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
 body{
     background-image: url(../img/registro1.jpeg);
-    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/registro.jpg); */
     position: relative;
     background-size: cover;
-    background-repeat: no-repeat;    
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 100%;    
+    max-width: 100%;
 }
 
 /* registro */
@@ -117,21 +125,18 @@ input::placeholder{
 }
 .mensaje{
     width: 450px;
-    /* background-color: #fff; */
+    background-color: #ffffff;
     border-radius: 10px;
     position: absolute;
     top: 0;
-    left: 50%;
-    /* transform: translate(-50%,-50%) scale(0); */
-    /* transition: transform .4s,top .4s; */
     visibility: hidden;
     text-align: center;
     padding: 0 30px 30px;
     height: 330px;
     color: #000;
-    backdrop-filter: blur(1500px);
-    
+    /* backdrop-filter: blur(1500px); */    
 }
+
 .mensaje h2{
     color: #000;
     font-weight: 700;
@@ -165,10 +170,17 @@ input::placeholder{
 }
 .abrir-mensaje{
     top: 50%;
+    left: 50%;
     transform: translate(-50%,-50%) scale(1);
     visibility: visible;
 }
+
+
 @media screen and (max-width: 768px) {
+    body {
+        min-width: 100vw;
+    }
+    
     .formulario {
         width: 350px;
         overflow-x: visible;
@@ -176,4 +188,17 @@ input::placeholder{
     .formulario .input {
         width: 100%;
     }
+    
+    .mensaje {
+        width: 350px;
+    }
+    
+    .mensaje button {
+        width: 270px;
+    }
+    
+}
+
+.blur {
+    filter: blur(5px);
 }
