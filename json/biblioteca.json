@@ -1,0 +1,662 @@
+[
+    {
+        "artista": "Romeo Santos",
+        "nombre": "Propuesta Indecente"
+    },
+    {
+        "artista": "Aventura",
+        "nombre": "Obsesión"
+    },
+    {
+        "artista": "Romeo Santos",
+        "nombre": "Eres Mía"
+    },
+    {
+        "artista": "Aventura",
+        "nombre": "El Perdedor"
+    },
+    {
+        "artista": "Prince Royce",
+        "nombre": "Darte un Beso"
+    },
+    {
+        "artista": "Aventura",
+        "nombre": "Un Beso"
+    },
+    {
+        "artista": "Romeo Santos",
+        "nombre": "Odio"
+    },
+    {
+        "artista": "Prince Royce",
+        "nombre": "Corazón Sin Cara"
+    },
+    {
+        "artista": "Aventura",
+        "nombre": "Cuando Volverás"
+    },
+    {
+        "artista": "Romeo Santos",
+        "nombre": "Promise"
+    },
+    {
+        "artista": "Aventura",
+        "nombre": "La Boda"
+    },
+    {
+        "artista": "Romeo Santos",
+        "nombre": "Hilito"
+    },
+    {
+        "artista": "Prince Royce",
+        "nombre": "Stand by Me"
+    },
+    {
+        "artista": "Aventura",
+        "nombre": "Los Infieles"
+    },
+    {
+        "artista": "Romeo Santos",
+        "nombre": "Cancioncitas de Amor"
+    },
+    {
+        "artista": "La Mona Jiménez",
+        "nombre": "Quién Se Tomó Todo El Vino"
+      },
+      {
+        "artista": "La Barra",
+        "nombre": "Dale Dale"
+      },
+      {
+        "artista": "Trulala",
+        "nombre": "A Bailar Que La Noche Es Larga"
+      },
+      {
+        "artista": "Banda XXI",
+        "nombre": "La Cumbia De La Cerveza"
+      },
+      {
+        "artista": "Gilda",
+        "nombre": "No Me Arrepiento de Este Amor"
+      },
+      {
+        "artista": "Jean Carlos",
+        "nombre": "Volveré"
+      },
+      {
+        "artista": "Rodrigo",
+        "nombre": "La Mano De Dios"
+      },
+      {
+        "artista": "Walter Olmos",
+        "nombre": "No Me Mientas"
+      },
+      {
+        "artista": "Chébere",
+        "nombre": "La Cumbia del Recuerdo"
+      },
+      {
+        "artista": "Dalila",
+        "nombre": "Sufriendo"
+      },
+      {
+        "artista": "Los Palmeras",
+        "nombre": "Bombón Asesino"
+      },
+      {
+        "artista": "La Fiesta",
+        "nombre": "La Chica Sexy"
+      },
+      {
+        "artista": "Leo Mattioli",
+        "nombre": "Le Pido A Dios"
+      },
+      {
+        "artista": "Cuarteto Imperial",
+        "nombre": "Mamá Vieja"
+      },
+      {
+        "artista": "Chébere",
+        "nombre": "Rosa Rosita"
+      },
+      {
+        "artista": "Damian Cordoba",
+        "nombre": "Que Nos Paso"
+      },
+      {
+        "artista": "Los Palmeras",
+        "nombre": "Bombón Asesino"
+      },
+      {
+        "artista": "La Nueva Luna",
+        "nombre": "Ahora Te Vas"
+      },
+      {
+        "artista": "Ráfaga",
+        "nombre": "Mentirosa"
+      },
+      {
+        "artista": "Amar Azul",
+        "nombre": "Yo Me Enamoré"
+      },
+      {
+        "artista": "Grupo Play",
+        "nombre": "Si Supieras"
+      },
+      {
+        "artista": "Los del Fuego",
+        "nombre": "Noche Fría"
+      },
+      {
+        "artista": "Los Charros",
+        "nombre": "Amor de Chat"
+      },
+      {
+        "artista": "Gilda",
+        "nombre": "No Me Arrepiento de Este Amor"
+      },
+      {
+        "artista": "Banda XXI",
+        "nombre": "Que Bonito"
+      },
+      {
+        "artista": "Rodrigo",
+        "nombre": "Lo Mejor del Amor"
+      },
+      {
+        "artista": "Dalila",
+        "nombre": "Tu Fotografia"
+      },
+      {
+        "artista": "Karina",
+        "nombre": "Con la Misma Moneda"
+      },
+      {
+        "artista": "Supermerk2",
+        "nombre": "Que Calor"
+      },
+      {
+        "artista": "La Barra",
+        "nombre": "El Mundo a Tus Pies"
+      },
+      {
+        "artista": "David Guetta",
+        "nombre": "Titanium (feat. Sia)"
+      },
+      {
+        "artista": "Calvin Harris",
+        "nombre": "Summer"
+      },
+      {
+        "artista": "Avicii",
+        "nombre": "Wake Me Up"
+      },
+      {
+        "artista": "The Chainsmokers",
+        "nombre": "Closer (feat. Halsey)"
+      },
+      {
+        "artista": "Zedd",
+        "nombre": "Clarity (feat. Foxes)"
+      },
+      {
+        "artista": "Martin Garrix",
+        "nombre": "Animals"
+      },
+      {
+        "artista": "Marshmello",
+        "nombre": "Alone"
+      },
+      {
+        "artista": "Kygo",
+        "nombre": "Stole the Show (feat. Parson James)"
+      },
+      {
+        "artista": "Tiesto",
+        "nombre": "Adagio For Strings"
+      },
+      {
+        "artista": "Steve Aoki",
+        "nombre": "Boneless"
+      },
+      {
+        "artista": "Deadmau5",
+        "nombre": "Ghosts 'n' Stuff (feat. Rob Swire)"
+      },
+      {
+        "artista": "Skrillex",
+        "nombre": "Bangarang (feat. Sirah)"
+      },
+      {
+        "artista": "Swedish House Mafia",
+        "nombre": "Don't You Worry Child (feat. John Martin)"
+      },
+      {
+        "artista": "Armin van Buuren",
+        "nombre": "This Is What It Feels Like (feat. Trevor Guthrie)"
+      },
+      {
+        "artista": "Disclosure",
+        "nombre": "Latch (feat. Sam Smith)"
+      },
+      {
+        "artista": "Los Manseros Santiagueños",
+        "nombre": "La Pucha con el Changuito"
+    },
+    {
+        "artista": "Soledad Pastorutti",
+        "nombre": "La Sole"
+    },
+    {
+        "artista": "Los Nocheros",
+        "nombre": "La Yapa"
+    },
+    {
+        "artista": "Los Huayra",
+        "nombre": "La Noche Sin Ti"
+    },
+    {
+        "artista": "Teresa Parodi",
+        "nombre": "Canción con Todos"
+    },
+    {
+        "artista": "Peteco Carabajal",
+        "nombre": "Luna Tucumana"
+    },
+    {
+        "artista": "Los Chalchaleros",
+        "nombre": "La Nochera"
+    },
+    {
+        "artista": "Horacio Guarany",
+        "nombre": "Si Se Calla el Cantor"
+    },
+    {
+        "artista": "Los Tekis",
+        "nombre": "Cuando Llora Mi Guitarra"
+    },
+    {
+        "artista": "Jorge Cafrune",
+        "nombre": "Zamba de mi Esperanza"
+    },
+    {
+        "artista": "Soledad Pastorutti",
+        "nombre": "A Don Ata"
+    },
+    {
+        "artista": "Los Chalchaleros",
+        "nombre": "Amor Salvaje"
+    },
+    {
+        "artista": "Horacio Guarany",
+        "nombre": "Siembra"
+    },
+    {
+        "artista": "Soledad Pastorutti",
+        "nombre": "Alfonsina y el Mar"
+    },
+    {
+        "artista": "Los Tekis",
+        "nombre": "Llorar Llorar"
+    },
+    {
+        "artista": "Adele",
+        "nombre": "Rolling in the Deep"
+      },
+      {
+        "artista": "Ed Sheeran",
+        "nombre": "Shape of You"
+      },
+      {
+        "artista": "Taylor Swift",
+        "nombre": "Shake It Off"
+      },
+      {
+        "artista": "Bruno Mars",
+        "nombre": "Uptown Funk (feat. Mark Ronson)"
+      },
+      {
+        "artista": "Dua Lipa",
+        "nombre": "Don't Start Now"
+      },
+      {
+        "artista": "Maroon 5",
+        "nombre": "Sugar"
+      },
+      {
+        "artista": "Justin Bieber",
+        "nombre": "Sorry"
+      },
+      {
+        "artista": "Katy Perry",
+        "nombre": "Roar"
+      },
+      {
+        "artista": "The Weeknd",
+        "nombre": "Blinding Lights"
+      },
+      {
+        "artista": "Shawn Mendes",
+        "nombre": "Stitches"
+      },
+      {
+        "artista": "Ariana Grande",
+        "nombre": "Thank U, Next"
+      },
+      {
+        "artista": "Camila Cabello",
+        "nombre": "Havana (feat. Young Thug)"
+      },
+      {
+        "artista": "Billie Eilish",
+        "nombre": "Bad Guy"
+      },
+      {
+        "artista": "Sam Smith",
+        "nombre": "Stay With Me"
+      },
+      {
+        "artista": "Lady Gaga",
+        "nombre": "Bad Romance"
+      },
+      {
+        "artista": "Eminem",
+        "nombre": "Lose Yourself"
+      },
+      {
+        "artista": "Notorious B.I.G.",
+        "nombre": "Juicy"
+      },
+      {
+        "artista": "Tupac Shakur",
+        "nombre": "California Love"
+      },
+      {
+        "artista": "Dr. Dre",
+        "nombre": "Still D.R.E."
+      },
+      {
+        "artista": "N.W.A",
+        "nombre": "Straight Outta Compton"
+      },
+      {
+        "artista": "Kendrick Lamar",
+        "nombre": "HUMBLE."
+      },
+      {
+        "artista": "Jay-Z",
+        "nombre": "99 Problems"
+      },
+      {
+        "artista": "Outkast",
+        "nombre": "Ms. Jackson"
+      },
+      {
+        "artista": "Kanye West",
+        "nombre": "Stronger"
+      },
+      {
+        "artista": "Snoop Dogg",
+        "nombre": "Gin and Juice"
+      },
+      {
+        "artista": "Lil Wayne",
+        "nombre": "A Milli"
+      },
+      {
+        "artista": "Run-D.M.C.",
+        "nombre": "It's Tricky"
+      },
+      {
+        "artista": "Beastie Boys",
+        "nombre": "Sabotage"
+      },
+      {
+        "artista": "Public Enemy",
+        "nombre": "Fight the Power"
+      },
+      {
+        "artista": "Nas",
+        "nombre": "N.Y. State of Mind"
+      },
+      {
+        "artista": "Daddy Yankee",
+        "nombre": "Gasolina"
+      },
+      {
+        "artista": "Don Omar",
+        "nombre": "Danza Kuduro (feat. Lucenzo)"
+      },
+      {
+        "artista": "Nicky Jam",
+        "nombre": "El Perdón (feat. Enrique Iglesias)"
+      },
+      {
+        "artista": "J Balvin",
+        "nombre": "Ginza"
+      },
+      {
+        "artista": "Ozuna",
+        "nombre": "Taki Taki (feat. DJ Snake, Selena Gomez, Cardi B)"
+      },
+      {
+        "artista": "Maluma",
+        "nombre": "Felices los 4"
+      },
+      {
+        "artista": "Karol G",
+        "nombre": "Tusa (feat. Nicki Minaj)"
+      },
+      {
+        "artista": "Wisin & Yandel",
+        "nombre": "Rakata"
+      },
+      {
+        "artista": "Bad Bunny",
+        "nombre": "Safaera (feat. Jowell & Randy, Ñengo Flow)"
+      },
+      {
+        "artista": "Anuel AA",
+        "nombre": "China (feat. Daddy Yankee, Karol G, J Balvin, Ozuna)"
+      },
+      {
+        "artista": "Sech",
+        "nombre": "Otro Trago (feat. Darell)"
+      },
+      {
+        "artista": "Rauw Alejandro",
+        "nombre": "Fantasías"
+      },
+      {
+        "artista": "Farruko",
+        "nombre": "Krippy Kush (feat. Bad Bunny)"
+      },
+      {
+        "artista": "Becky G",
+        "nombre": "Mayores (feat. Bad Bunny)"
+      },
+      {
+        "artista": "Darell",
+        "nombre": "Asesina (feat. Brytiago)"
+      },
+      {
+        "artista": "Bob Marley",
+        "nombre": "No Woman, No Cry"
+      },
+      {
+        "artista": "UB40",
+        "nombre": "Red Red Wine"
+      },
+      {
+        "artista": "Inner Circle",
+        "nombre": "Sweat (A La La La La Long)"
+      },
+      {
+        "artista": "Sean Paul",
+        "nombre": "Temperature"
+      },
+      {
+        "artista": "Shaggy",
+        "nombre": "Angel"
+      },
+      {
+        "artista": "Slightly Stoopid",
+        "nombre": "Collie Man"
+      },
+      {
+        "artista": "Sublime",
+        "nombre": "Santeria"
+      },
+      {
+        "artista": "Toots & The Maytals",
+        "nombre": "Pressure Drop"
+      },
+      {
+        "artista": "The Wailers",
+        "nombre": "Three Little Birds"
+      },
+      {
+        "artista": "Ziggy Marley",
+        "nombre": "Tomorrow People"
+      },
+      {
+        "artista": "SOJA",
+        "nombre": "You and Me"
+      },
+      {
+        "artista": "Rebelution",
+        "nombre": "Feeling Alright"
+      },
+      {
+        "artista": "Matisyahu",
+        "nombre": "One Day"
+      },
+      {
+        "artista": "Damian Marley",
+        "nombre": "Welcome to Jamrock"
+      },
+      {
+        "artista": "311",
+        "nombre": "Amber"
+      },
+      {
+        "artista": "LGante",
+        "nombre": "BZRP Music Sessions #40"
+      },
+      {
+        "artista": "Perro Primo",
+        "nombre": "Baila Morena"
+      },
+      {
+        "artista": "El Noba",
+        "nombre": "Dale Me Gusta"
+      },
+      {
+        "artista": "LGante",
+        "nombre": "Pistola y Cinturon"
+      },
+      {
+        "artista": "Perro Primo",
+        "nombre": "Dale"
+      },
+      {
+        "artista": "El Noba",
+        "nombre": "Dame Tu Cosita"
+      },
+      {
+        "artista": "LGante",
+        "nombre": "Las Reebok o Las Nike"
+      },
+      {
+        "artista": "Perro Primo",
+        "nombre": "RKT Anthem"
+      },
+      {
+        "artista": "El Noba",
+        "nombre": "Panadera"
+      },
+      {
+        "artista": "LGante",
+        "nombre": "RKT en Paraguay"
+      },
+      {
+        "artista": "Perro Primo",
+        "nombre": "RKT del Perro"
+      },
+      {
+        "artista": "El Noba",
+        "nombre": "Pinocho"
+      },
+      {
+        "artista": "LGante",
+        "nombre": "Mi Novia la Perra"
+      },
+      {
+        "artista": "Perro Primo",
+        "nombre": "Entra la Perro"
+      },
+      {
+        "artista": "El Noba",
+        "nombre": "RKT de los Ninjas"
+      },
+      {
+        "artista": "Sumo",
+        "nombre": "La Rubia Tarada"
+      },
+      {
+        "artista": "Charly García",
+        "nombre": "Demoliendo hoteles"
+      },
+      {
+        "artista": "Los Redondos",
+        "nombre": "Un ángel para tu soledad"
+      },
+      {
+        "artista": "Pappo's Blues",
+        "nombre": "Desconfío de la vida"
+      },
+      {
+        "artista": "Soda Stereo",
+        "nombre": "De música ligera"
+      },
+      {
+        "artista": "Andrés Calamaro",
+        "nombre": "Flaca"
+      },
+      {
+        "artista": "La Renga",
+        "nombre": "El revelde"
+      },
+      {
+        "artista": "Virus",
+        "nombre": "Una luna de miel en la mano"
+      },
+      {
+        "artista": "Patricio Rey y sus Redonditos de Ricota",
+        "nombre": "La bestia pop"
+      },
+      {
+        "artista": "Divididos",
+        "nombre": "La flor azul"
+      },
+      {
+        "artista": "Bersuit Vergarabat",
+        "nombre": "La argentinidad al palo"
+      },
+      {
+        "artista": "Fito Páez",
+        "nombre": "11 y 6"
+      },
+      {
+        "artista": "Ratones Paranoicos",
+        "nombre": "Rock del gato"
+      },
+      {
+        "artista": "Los Auténticos Decadentes",
+        "nombre": "El murguero"
+      },
+      {
+        "artista": "La Bersuit",
+        "nombre": "Sr. Cobranza"
+      }
+]
