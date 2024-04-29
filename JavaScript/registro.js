@@ -56,12 +56,12 @@ function validacion() {
 const pass = document.getElementById("pass");
 const icon = document.querySelector(".cont");
 
-icon.addEventListener("click", e=> {
+icon.addEventListener("click", e => {
     if (pass.type === "password") {
         pass.type = "text";
         icon.classList.remove("bx-show-alt")
         icon.classList.add("bx-hide")
-    }else {
+    } else {
         pass.type = "password";
         icon.classList.add("bx-show-alt")
         icon.classList.remove("bx-hide")
@@ -72,12 +72,12 @@ icon.addEventListener("click", e=> {
 const pass2 = document.getElementById("rpass");
 const icon2 = document.querySelector(".rcont");
 
-icon2.addEventListener("click", e=> {
+icon2.addEventListener("click", e => {
     if (pass2.type === "password") {
         pass2.type = "text";
         icon2.classList.remove("bx-show-alt")
         icon2.classList.add("bx-hide")
-    }else {
+    } else {
         pass2.type = "password";
         icon2.classList.add("bx-show-alt")
         icon2.classList.remove("bx-hide")
@@ -92,21 +92,21 @@ function enviarMail() {
     const nombre = document.Formu.Nombre.value;
     const apellido = document.Formu.Apellido.value;
 
-    const cuerpoCorreo = 
+    const cuerpoCorreo =
         `Usuario: ${usuario}<br>
         Email: ${email}<br>
         Contraseña: ${contraseña}<br>
         Nombre: ${nombre}<br>
         Apellido: ${apellido}<br>`;
-   
+
     Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "hache.83@gmail.com",
-        Password : "9812628575310C1BA59903F37E847C50FFC9",
-        To : 'tejerinamatias83@gmail.com',
-        From : "hache.83@gmail.com",
-        Subject : "Nuevo Usuario" ,
-        Body : cuerpoCorreo
+        Host: "smtp.elasticemail.com",
+        Username: "hache.83@gmail.com",
+        Password: "9812628575310C1BA59903F37E847C50FFC9",
+        To: 'tejerinamatias83@gmail.com',
+        From: "hache.83@gmail.com",
+        Subject: "Nuevo Usuario",
+        Body: cuerpoCorreo
     });
 }
-    
+

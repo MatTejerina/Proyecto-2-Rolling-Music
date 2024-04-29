@@ -1,0 +1,31 @@
+{
+    "musicaRipple": [
+        {
+            "id": "2",
+            "artista": "Daddy Yankee",
+            "nombre": "Gasolina",
+            "categoria": "Reggaeton",
+            "duracion": "3:12",
+            "imagen": "https://images.app.goo.gl/WNAyeRqN1og6N7g66",
+            "publicado": true
+        },
+        {
+            "id": "2",
+            "artista": "AVH",
+            "nombre": "DREAM",
+            "categoria": "House",
+            "duracion": "3:03",
+            "imagen": "https://images.app.goo.gl/vcP3zaqtHyc37zzW9",
+            "publicado": true
+        },
+        {
+            "id": "3",
+            "artista": "Soda Stereo",
+            "nombre": "Tratame ssuavemente",
+            "categoria": "Rock",
+            "duracion": "3:20",
+            "imagen": "https://images.app.goo.gl/jrQoGtXbx3oe4CXB9",
+            "publicado": true
+        }
+    ]
+}
