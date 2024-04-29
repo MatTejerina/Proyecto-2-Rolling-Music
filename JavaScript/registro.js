@@ -56,7 +56,7 @@ function validacion() {
     
     return false;
 }
-
+z
 // visualizar contraseñas
 const pass = document.getElementById("pass");
 const icon = document.querySelector(".cont");

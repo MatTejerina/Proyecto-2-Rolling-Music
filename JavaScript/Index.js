@@ -29,6 +29,7 @@ function validacion() {
     }
 }
 
+
 // Mostrar las sesiones
 document.addEventListener("DOMContentLoaded", function() {
     const loggedInUser = sessionStorage.getItem("loggedInUser");
