@@ -1,57 +1,62 @@
-// validacion del formulario
 function validacion() {
     let expresionCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let soloLetras = /^[ñÑa-zA-Z\s]*$/;
 
-    let soloLetras = /^[a-zA-Z\s]*$/;
+    let usuario = document.Formu.Usuario.value;
+    let email = document.Formu.Email.value;
+    let contraseña = document.Formu.Contraseña.value;
+    let rcontraseña = document.Formu.Rcontraseña.value;
+    let nombre = document.Formu.Nombre.value;
+    let apellido = document.Formu.Apellido.value;
+    let aceptoTerminos = document.getElementById('aceptoTerminos').checked;
 
-    if (document.Formu.Usuario.value == "") {
+    // Validaciones de formulario
+    if (usuario === "") {
         document.getElementById("resultado").innerHTML = "Ingresa un Usuario*";
         return false;
-    } else if (document.Formu.Usuario.value.length < 6) {
+    } else if (usuario.length < 6) {
         document.getElementById("resultado").innerHTML = "Mínimo 6 caracteres*";
         return false;
-    } else if (document.Formu.Email.value == "") {
+    } else if (email === "") {
         document.getElementById("resultado").innerHTML = "Ingresa un Mail*";
         return false;
-    } else if (!expresionCorreo.test(document.Formu.Email.value)) {
+    } else if (!expresionCorreo.test(email)) {
         document.getElementById("resultado").innerHTML = "Correo electrónico inválido*";
         return false;
-    } else if (document.Formu.Contraseña.value == "") {
+    } else if (contraseña === "") {
         document.getElementById("resultado").innerHTML = "Ingresa una Contraseña*";
         return false;
-    } else if (document.Formu.Contraseña.value.length < 6) {
+    } else if (contraseña.length < 6) {
         document.getElementById("resultado").innerHTML = "Contraseña de 6 caracteres*";
         return false;
-    } else if (document.Formu.Rcontraseña.value == "") {
+    } else if (rcontraseña === "") {
         document.getElementById("resultado").innerHTML = "Repite la Contraseña*";
         return false;
-    } else if (document.Formu.Rcontraseña.value !== document.Formu.Contraseña.value) {
-        document.getElementById("resultado").innerHTML = "Las Contraseñas no Coinciden*";
+    } else if (rcontraseña !== contraseña) {
+        document.getElementById("resultado").innerHTML = "Las Contraseñas no coinciden*";
         return false;
-    } else if (document.Formu.Nombre.value == "") {
+    } else if (nombre === "") {
         document.getElementById("resultado").innerHTML = "Ingresa tu Nombre*";
         return false;
-    } else if (!soloLetras.test(document.Formu.Nombre.value)) {
+    } else if (!soloLetras.test(nombre)) {
         document.getElementById("resultado").innerHTML = "Ingresa solo letras en el Nombre*";
         return false;
-    } else if (document.Formu.Apellido.value == "") {
+    } else if (apellido === "") {
         document.getElementById("resultado").innerHTML = "Ingresa tu Apellido*";
         return false;
-    } else if (!soloLetras.test(document.Formu.Apellido.value)) {
+    } else if (!soloLetras.test(apellido)) {
         document.getElementById("resultado").innerHTML = "Ingresa solo letras en el Apellido*";
         return false;
-    } else if (!document.getElementById('aceptoTerminos').checked) {
+    } else if (!aceptoTerminos) {
         document.getElementById("resultado").innerHTML = "Debes aceptar los términos y condiciones*";
         return false;
-    } else if (document.Formu.Contraseña.value == document.Formu.Rcontraseña.value) {
-        mensaje.classList.add("abrir-mensaje");
-        enviarMail();
-        return false;
-    } else {
-        return true;
     }
+    mensaje.classList.add("abrir-mensaje");
+    enviarMail();
+    
+    return false;
 }
-
+z
 // visualizar contraseñas
 const pass = document.getElementById("pass");
 const icon = document.querySelector(".cont");
@@ -83,6 +88,7 @@ icon2.addEventListener("click", e=> {
         icon2.classList.remove("bx-hide")
     }
 })
+
 // enviar mail
 
 function enviarMail() {
@@ -109,4 +115,25 @@ function enviarMail() {
         Body : cuerpoCorreo
     });
 }
-    
+
+
+// Selecciona el elemento que se observará
+const targetNode = document.getElementById('mensaje');
+
+// Crea un nuevo observador de mutaciones
+const observer = new MutationObserver(function(mutationsList) {
+    mutationsList.forEach(function(mutation) {
+        if (mutation.attributeName === 'class') {
+            if (targetNode.classList.contains('abrir-mensaje')) {
+                form.classList.add('blur');
+            } else {
+                form.classList.remove('blur');
+            }
+        }
+    });
+});
+
+// Configura y comienza a observar el elemento
+const config = { attributes: true };
+observer.observe(targetNode, config);
+

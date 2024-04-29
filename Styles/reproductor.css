@@ -1,0 +1,397 @@
+/* Estilos body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family), sans-serif;
+}
+:root {
+    --font-family: 'Inter', sans-serif; 
+}
+
+body {
+    font-family: var(--font-family); 
+}
+
+
+h1, h2, h3, p {
+    font-family: var(--font-family); 
+}
+/* Estilos botones */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color:  #b549e3 ;
+    font-size: 30px;
+    padding: 20px;
+    text-align: center; 
+    justify-content: center;
+}
+.cora{
+    border: solid 1px #b549e3;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 25px;
+    
+
+}
+
+.btn:hover {
+    background: #b549e3;
+    color: #ffffff;
+}
+
+.btn-green {
+    background: #000dff;
+    width: 80%;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Estilos app */
+.app {
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    font-family: var(--font-family), sans-serif;
+    color: #ffffffb0;
+}
+
+/* Estilos álbum */
+.album {
+    background: linear-gradient(to right, rgba(2, 2, 2, 0.726) 15%, rgba(8, 8, 8, 0.829)), url(../img/fondoprincipal.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 80vw;
+    position: fixed;
+    right: 0;
+    overflow: scroll;
+}
+
+/* Menú lateral */
+.menu-aside {
+    height: 90vh;
+    background: rgb(19, 18, 18);
+    width: 21vw;
+}
+
+/* Barra de reproducción */
+.reproducir {
+    height: 10vh;
+    width: 100vw;
+    background: rgb(19, 18, 18);
+    position: fixed;
+    top: 90vh;
+}
+
+/* Logo */
+.i-logo2 {
+    font-size: 35px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/* Enlaces de reproducción */
+.play {
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffffb0;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    font-family: var(--font-family), sans-serif;
+}
+
+.play:hover {
+    background: white;
+    color: black;
+}
+
+/* Estilos listas de reproducción */
+.playlist {
+    border-top: solid .5px #ffffff4d;
+}
+
+.playlists:last-child {
+    border-bottom: solid .5px #ffffff4d;
+}
+
+/* Usuario */
+.user {
+    display: flex;
+    justify-content: flex-end;
+    height: 5vh;
+    align-items: center;
+    margin-top: 5px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.user:hover + .animate {
+    width: 100%;
+    transition: all ease .6s;
+}
+
+.animate {
+    border-bottom: solid .3px #ffffff88;
+    width: 80%;
+    margin: auto auto;
+    margin-bottom: 15px;
+    transition: all ease-in 0.1s;
+}
+
+.user-desc {
+    font-size: 20px;
+    transition: all ease-in-out .6s;
+    color: white;
+}
+
+.user-desc:hover {
+    color: #b549e3;
+    transition: all ease-in-out .6s;
+}
+
+.user-desc i {
+    margin-right: 10px;
+}
+
+/* Acciones */
+.acciones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.play2 {
+    width: 25%;
+}
+
+/* Botones de reproducción */
+.reaccion-inactiva,
+.play-music,
+.control {
+    display: flex;
+    width: 15px;
+    height: 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* Descripción álbum */
+.album-description {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Párrafos */
+p {
+    font-size: 20px;
+}
+
+/* Título */
+.title h2 {
+    font-size: 50px;
+}
+
+/* Animación de reacción activa */
+.reaccion-activa {
+    background: #b549e3;
+    font-size: 25px;
+    color: #000000;
+    animation: destello 1s 2;
+    transform-origin: 50% 50%;
+}
+
+@keyframes destello {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Lista álbum */
+.album-list-music {
+    margin-top: 1px;
+}
+
+/* Nombre canción */
+.name {
+    display: inline-block;
+}
+
+/* Botón de reproducción */
+.play-music {
+    margin-top: 2;
+}
+
+/* Botón archivo */
+.boton-archivo {
+    appearance: none;
+    background-color: white;
+    color: #000000;
+    padding: 2px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.boton-archivo:hover {
+    background-color: #b549e3;
+    color: rgb(0, 0, 0);
+}
+
+/* Elementos de lista*/
+.music {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: solid .3px #ffffff88;
+    padding: 5px;
+    padding-right: 20px;
+}
+.music h3{
+    margin-left: 20px;
+}
+
+.music:hover {
+    cursor: pointer;
+    background: #ffffff3d;
+}
+
+.music:last-child {
+    border-bottom: solid .3px #ffffff88;
+}
+
+/* Controles */
+.reproducir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.controles {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.control {
+    margin: 5px;
+}
+
+/* Imágenes ocultas */
+a img {
+    display: none;
+}
+
+/* audio */
+audio {
+    background-color: rgb(19, 18, 18);
+    border: 18px solid rgb(19, 18, 18);
+}
+
+audio::-webkit-media-controls-panel {
+    background: #b549e3 ;
+}
+
+@media screen and (max-width: 768px) {
+    .app {
+        flex-direction: column;
+        height: auto;
+    }
+    .album {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    .menu-aside {
+        width: 95%;
+        height: auto;
+    }
+    .reproducir {
+        width: 100%;
+        position: static;
+        height: auto;
+    }
+    .play {
+        padding: 15px;
+        font-size: 18px;
+    }
+    .user {
+        margin-right: 10px;
+    }
+    .name {
+        display: block;
+    }
+    .play-music {
+        margin-top: 5px;
+    }
+}
+#imgAlbum{
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px black;
+
+}
+@media screen and (max-width: 768px) {
+    .album {
+        position: static;
+    }
+    .album-description {
+        flex-direction: column;
+        align-items: center;
+    }
+    #imgAlbum {
+        /* height: auto; */
+        margin-bottom: 10px;
+    }
+
+}
+@media screen and (max-width: 776px) {
+    .user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+    .user-desc {
+        margin-left: 5px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .center-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        font-weight: 900;
+    }
+}
+@media screen and (max-width: 767px){
+.title h2{
+    font-size: 35px;
+
+}
+
+}
