@@ -1,5 +1,5 @@
 // Cambiar el nombre de la clave para localStorage
-const SONGS_KEY = 'Canciones';
+const SONGS_KEY = 'canciones';
 
 // Cargar canciones desde localStorage o desde el archivo JSON
 function loadSongs() {
@@ -67,10 +67,34 @@ function addEventListeners() {
 
     $(document).on('click', '.delete-song-button', function () {
         const index = $(this).data('index');
+        const songToDelete = songs[index]; // Obtenemos la canción a eliminar
+    
+        // Preguntar al usuario si realmente quiere eliminar la canción
         if (confirm('¿Estás seguro de que quieres borrar esta canción?')) {
-            songs.splice(index, 1);
-            saveSongs(); // Guardar cambios
-            renderSongs(); // Actualizar la tabla
+            // Realizamos la llamada `fetch` para eliminar la canción de la base de datos (si es necesario)
+            fetch(`https://json-server-render-r0gl.onrender.com/usuarios/${songToDelete.id}`, {
+                method: 'DELETE'
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Eliminar la canción de la lista local
+                    songs.splice(index, 1);
+    
+                    // Guardar el cambio en el localStorage
+                    saveSongs();
+    
+                    // Actualizar la tabla para reflejar el cambio
+                    renderSongs();
+    
+                    alert("Canción eliminada con éxito.");
+                } else {
+                    alert("Error al eliminar la canción. Por favor, inténtelo nuevamente.");
+                }
+            })
+            .catch(error => {
+                console.error("Error al eliminar la canción:", error);
+                alert("Se produjo un error al intentar eliminar la canción. Por favor, inténtelo más tarde.");
+            });
         }
     });
 }
