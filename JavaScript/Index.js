@@ -1,7 +1,3 @@
-fetch('http://localhost:3000/usuarios')
-.then(response=>response.json())
-.then(data => localStorage.setItem('Users', JSON.stringify(data)))
-
 
 // traer usuarios al localStorage
 // fetch("/json/usuGuardar.json")
@@ -11,6 +7,10 @@ fetch('http://localhost:3000/usuarios')
 // fetch("/json/biblioteca.json")
 // .then(response => response.json())
 // .then(data => localStorage.setItem('Canciones', JSON.stringify(data)))
+
+fetch('https://json-server-render-r0gl.onrender.com')
+.then(response=>response.json())
+.then(data => localStorage.setItem('Users', JSON.stringify(data)))
 
 // Validar acceder
 function validacion() {

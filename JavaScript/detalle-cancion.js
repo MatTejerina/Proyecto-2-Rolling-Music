@@ -98,9 +98,9 @@ function validacion() {
         sessionStorage.setItem("keySession", usuarioEncontrado.admin);
 
         // Redirigir según el usuario
-        if (usuarioEncontrado.usuario === 'true') {
+        if (usuarioEncontrado.admin === true) {
             window.location.href = "/Index.html";
-        } else if (usuarioEncontrado.usuario === 'false') {
+        } else if (usuarioEncontrado.admin === false) {
             window.location.href = "/Index.html";
         }
         return true; // Impedir el envío del formulario
