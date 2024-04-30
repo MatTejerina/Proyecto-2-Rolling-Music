@@ -1,62 +1,85 @@
+// validacion del formulario
 function validacion() {
     let expresionCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     let soloLetras = /^[ñÑa-zA-Z\s]*$/;
 
     let usuario = document.Formu.Usuario.value;
-    let email = document.Formu.Email.value;
     let contraseña = document.Formu.Contraseña.value;
-    let rcontraseña = document.Formu.Rcontraseña.value;
-    let nombre = document.Formu.Nombre.value;
-    let apellido = document.Formu.Apellido.value;
-    let aceptoTerminos = document.getElementById('aceptoTerminos').checked;
 
-    // Validaciones de formulario
-    if (usuario === "") {
+    if (document.Formu.Usuario.value == "") {
         document.getElementById("resultado").innerHTML = "Ingresa un Usuario*";
         return false;
-    } else if (usuario.length < 6) {
+    } else if (document.Formu.Usuario.value.length < 6) {
         document.getElementById("resultado").innerHTML = "Mínimo 6 caracteres*";
         return false;
-    } else if (email === "") {
+    } else if (document.Formu.Email.value == "") {
         document.getElementById("resultado").innerHTML = "Ingresa un Mail*";
         return false;
-    } else if (!expresionCorreo.test(email)) {
+    } else if (!expresionCorreo.test(document.Formu.Email.value)) {
         document.getElementById("resultado").innerHTML = "Correo electrónico inválido*";
         return false;
-    } else if (contraseña === "") {
+    } else if (document.Formu.Contraseña.value == "") {
         document.getElementById("resultado").innerHTML = "Ingresa una Contraseña*";
         return false;
-    } else if (contraseña.length < 6) {
+    } else if (document.Formu.Contraseña.value.length < 6) {
         document.getElementById("resultado").innerHTML = "Contraseña de 6 caracteres*";
         return false;
-    } else if (rcontraseña === "") {
+    } else if (document.Formu.Rcontraseña.value == "") {
         document.getElementById("resultado").innerHTML = "Repite la Contraseña*";
         return false;
-    } else if (rcontraseña !== contraseña) {
-        document.getElementById("resultado").innerHTML = "Las Contraseñas no coinciden*";
+    } else if (document.Formu.Rcontraseña.value !== document.Formu.Contraseña.value) {
+        document.getElementById("resultado").innerHTML = "Las Contraseñas no Coinciden*";
         return false;
-    } else if (nombre === "") {
+    } else if (document.Formu.Nombre.value == "") {
         document.getElementById("resultado").innerHTML = "Ingresa tu Nombre*";
         return false;
-    } else if (!soloLetras.test(nombre)) {
+    } else if (!soloLetras.test(document.Formu.Nombre.value)) {
         document.getElementById("resultado").innerHTML = "Ingresa solo letras en el Nombre*";
         return false;
-    } else if (apellido === "") {
+    } else if (document.Formu.Apellido.value == "") {
         document.getElementById("resultado").innerHTML = "Ingresa tu Apellido*";
         return false;
-    } else if (!soloLetras.test(apellido)) {
+    } else if (!soloLetras.test(document.Formu.Apellido.value)) {
         document.getElementById("resultado").innerHTML = "Ingresa solo letras en el Apellido*";
         return false;
-    } else if (!aceptoTerminos) {
+    } else if (!document.getElementById('aceptoTerminos').checked) {
         document.getElementById("resultado").innerHTML = "Debes aceptar los términos y condiciones*";
         return false;
+    } else if (document.Formu.Contraseña.value == document.Formu.Rcontraseña.value) {
+        // Obtener usuarios existentes
+        // let usuarios = localStorage.getItem("Users");
+        // if (usuarios) {
+        //     usuarios = JSON.parse(usuarios);
+        // } else {
+        //     usuarios = [];
+        // }
+        
+        let nuevoUsuario = {
+            usuario,
+            contraseña,
+            "estadoCuenta": false,
+            admin : false
+        };
+        fetch('http://localhost:3000/usuarios',{
+            method:'POST',
+            body: JSON.stringify(nuevoUsuario),
+            headers: {
+                'Content-type' : 'aplication/json'
+            }
+        })
+        .then(response=>response.json)
+
+        // usuarios.push(nuevoUsuario);
+        // localStorage.setItem("Users", JSON.stringify(usuarios));
+        
+        // enviarMail();
+        mensaje.classList.add("abrir-mensaje");
+        return false;
+    } else {
+        return true;
     }
-    mensaje.classList.add("abrir-mensaje");
-    enviarMail();
-    
-    return false;
 }
-z
+
 // visualizar contraseñas
 const pass = document.getElementById("pass");
 const icon = document.querySelector(".cont");
@@ -90,7 +113,6 @@ icon2.addEventListener("click", e=> {
 })
 
 // enviar mail
-
 function enviarMail() {
     const usuario = document.Formu.Usuario.value;
     const email = document.Formu.Email.value;
@@ -115,25 +137,4 @@ function enviarMail() {
         Body : cuerpoCorreo
     });
 }
-
-
-// Selecciona el elemento que se observará
-const targetNode = document.getElementById('mensaje');
-
-// Crea un nuevo observador de mutaciones
-const observer = new MutationObserver(function(mutationsList) {
-    mutationsList.forEach(function(mutation) {
-        if (mutation.attributeName === 'class') {
-            if (targetNode.classList.contains('abrir-mensaje')) {
-                form.classList.add('blur');
-            } else {
-                form.classList.remove('blur');
-            }
-        }
-    });
-});
-
-// Configura y comienza a observar el elemento
-const config = { attributes: true };
-observer.observe(targetNode, config);
 

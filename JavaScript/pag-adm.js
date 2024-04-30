@@ -1,28 +1,28 @@
-// Global variable to hold the list of songs
-let songs = [];
+// Cambiar el nombre de la clave para localStorage
+const SONGS_KEY = 'Canciones';
 
-// Load songs from localStorage or from JSON file
+// Cargar canciones desde localStorage o desde el archivo JSON
 function loadSongs() {
-    const savedSongs = localStorage.getItem('songs');
+    const savedSongs = localStorage.getItem(SONGS_KEY);
     if (savedSongs) {
         songs = JSON.parse(savedSongs);
     } else {
-        $.getJSON('../json/lista.json', function (data) {
+        $.getJSON('../json/biblioteca.json', function (data) {
             songs = data;
-            saveSongs();
+            saveSongs(); // Guardar las canciones en localStorage
         });
     }
 }
 
-// Save songs to localStorage
+// Guardar canciones en localStorage
 function saveSongs() {
-    localStorage.setItem('songs', JSON.stringify(songs));
+    localStorage.setItem(SONGS_KEY, JSON.stringify(songs));
 }
 
-// Render songs in the table
+// Renderizar las canciones en la tabla
 function renderSongs() {
     const songTableBody = document.getElementById('songTableBody');
-    songTableBody.innerHTML = ''; // Clear the existing content
+    songTableBody.innerHTML = ''; // Limpiar el contenido existente
 
     songs.forEach((song, index) => {
         const row = document.createElement('tr');
@@ -36,24 +36,24 @@ function renderSongs() {
             <td>${song.published ? 'Sí' : 'No'}</td>
             <td>
                 <button class="btn btn-warning btn-sm edit-song-button" data-index="${index}" data-toggle="modal" data-target="#editSongModal">Editar</button>
-                <button class="btn btn-danger btn-sm delete-song-button" data-index="${index}">Borrar</button>
+                <button class="btn btn-danger btn-sm delete-song-button mt-1" data-index="${index}">Borrar</button>
             </td>
         `;
         songTableBody.appendChild(row);
     });
 }
 
-// Add event listeners
+// Escuchar eventos para los botones de agregar y editar canciones
 function addEventListeners() {
     document.getElementById('saveSongButton').addEventListener('click', addSong);
     document.getElementById('editSaveSongButton').addEventListener('click', saveEditSong);
 
-    // Attach event listeners to dynamically created elements
+    // Asociar eventos a elementos dinámicos
     $(document).on('click', '.edit-song-button', function () {
         const index = $(this).data('index');
         const song = songs[index];
 
-        // Fill the edit form with current data
+        // Llenar el formulario de edición con datos actuales
         document.getElementById('editArtistName').value = song.artist;
         document.getElementById('editSongName').value = song.name;
         document.getElementById('editCategory').value = song.category;
@@ -61,7 +61,7 @@ function addEventListeners() {
         document.getElementById('editImageUrl').value = song.imageUrl;
         document.getElementById('editPublished').checked = song.published;
 
-        // Store index in modal data for later use
+        // Almacenar índice en el modal para su uso posterior
         $('#editSongModal').data('index', index);
     });
 
@@ -69,13 +69,13 @@ function addEventListeners() {
         const index = $(this).data('index');
         if (confirm('¿Estás seguro de que quieres borrar esta canción?')) {
             songs.splice(index, 1);
-            saveSongs();
-            renderSongs();
+            saveSongs(); // Guardar cambios
+            renderSongs(); // Actualizar la tabla
         }
     });
 }
 
-// Add a new song
+// Agregar una nueva canción
 function addSong() {
     const artistName = document.getElementById('artistName').value;
     const songName = document.getElementById('songName').value;
@@ -93,20 +93,20 @@ function addSong() {
         published: published,
     });
 
-    saveSongs();
-    renderSongs();
-    $('#addSongModal').modal('hide');
+    saveSongs(); // Guardar la nueva canción
+    renderSongs(); // Actualizar la tabla
+    $('#addSongModal').modal('hide'); // Cerrar el modal de agregar
 }
 
-// Save changes after editing a song
+// Guardar cambios después de editar una canción
 function saveEditSong() {
     const index = $('#editSongModal').data('index');
-    const artistName = document.getElementById('editArtistName').value;
-    const songName = document.getElementById('editSongName').value;
-    const category = document.getElementById('editCategory').value;
-    const duration = document.getElementById('editDuration').value;
-    const imageUrl = document.getElementById('editImageUrl').value;
-    const published = document.getElementById('editPublished').checked;
+    const artistName = document.getElementId('editArtistName').value;
+    const songName = document.getElementId('editSongName').value;
+    const category = document.getElementId('editCategory').value;
+    const duration = document.getElementId('editDuration').value;
+    const imageUrl = document.getElementId('editImageUrl').value;
+    const published = document.getElementId('editPublished').checked;
 
     songs[index].artist = artistName;
     songs[index].name = songName;
@@ -115,17 +115,18 @@ function saveEditSong() {
     songs[index].imageUrl = imageUrl;
     songs[index].published = published;
 
-    saveSongs();
-    renderSongs();
-    $('#editSongModal').modal('hide');
+    saveSongs(); // Guardar cambios
+    renderSongs(); // Actualizar la tabla
+    $('#editSongModal').modal('hide'); // Cerrar el modal de edición
 }
 
-// Initialize the application
+// Inicializar la aplicación
 function initialize() {
-    loadSongs();
-    renderSongs();
-    addEventListeners();
+    loadSongs(); // Cargar canciones
+    renderSongs(); // Renderizar canciones
+    addEventListeners(); // Agregar oyentes de eventos
 }
 
-// Call initialize on page load
+// Llamar a la función de inicialización cuando se cargue la página
 document.addEventListener('DOMContentLoaded', initialize);
+

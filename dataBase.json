@@ -1,0 +1,25 @@
+{
+  "usuarios": [
+    {
+      "id": "b4fd",
+      "usuario": "admin1",
+      "contraseña": "123123",
+      "estadoCuenta": true,
+      "admin": true
+    },
+    {
+      "id": "d2ce",
+      "usuario": "matias",
+      "contraseña": "123123",
+      "estadoCuenta": true,
+      "admin": false
+    },
+    {
+      "id": "cac9",
+      "usuario": "nolasco",
+      "contraseña": "123123",
+      "estadoCuenta": false,
+      "admin": false
+    }
+  ]
+}
