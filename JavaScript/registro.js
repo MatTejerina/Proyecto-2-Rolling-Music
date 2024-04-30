@@ -72,7 +72,7 @@ function validacion() {
         // usuarios.push(nuevoUsuario);
         // localStorage.setItem("Users", JSON.stringify(usuarios));
         
-        // enviarMail();
+        enviarMail();
         mensaje.classList.add("abrir-mensaje");
         return false;
     } else {
