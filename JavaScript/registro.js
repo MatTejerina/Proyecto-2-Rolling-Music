@@ -47,21 +47,32 @@ function validacion() {
         return false;
     } else if (document.Formu.Contraseña.value == document.Formu.Rcontraseña.value) {
         // Obtener usuarios existentes
-        let usuarios = localStorage.getItem("Users");
-        if (usuarios) {
-            usuarios = JSON.parse(usuarios);
-        } else {
-            usuarios = [];
-        }
+        // let usuarios = localStorage.getItem("Users");
+        // if (usuarios) {
+        //     usuarios = JSON.parse(usuarios);
+        // } else {
+        //     usuarios = [];
+        // }
+        
         let nuevoUsuario = {
             usuario,
             contraseña,
-            admin : false,
+            "estadoCuenta": false,
+            admin : false
         };
-        usuarios.push(nuevoUsuario);
-        localStorage.setItem("Users", JSON.stringify(usuarios));
+        fetch('http://localhost:3000/usuarios',{
+            method:'POST',
+            body: JSON.stringify(nuevoUsuario),
+            headers: {
+                'Content-type' : 'aplication/json'
+            }
+        })
+        .then(response=>response.json)
+
+        // usuarios.push(nuevoUsuario);
+        // localStorage.setItem("Users", JSON.stringify(usuarios));
         
-        enviarMail();
+        // enviarMail();
         mensaje.classList.add("abrir-mensaje");
         return false;
     } else {

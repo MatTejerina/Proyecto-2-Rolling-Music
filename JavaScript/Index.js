@@ -1,20 +1,16 @@
-const usuGuardar = [ {
-    usuario: "admin1",
-    contraseña: "123123",
-    admin: true
-},
-{
-    usuario: "matias", 
-    contraseña: "123123",
-    admin: false}
-]
-localStorage.setItem('Users', JSON.stringify(usuGuardar))
-
-fetch("/json/biblioteca.json")
-.then(response => response.json())
-.then(data => localStorage.setItem('Canciones', JSON.stringify(data)))
+fetch('http://localhost:3000/usuarios')
+.then(response=>response.json())
+.then(data => localStorage.setItem('Users', JSON.stringify(data)))
 
 
+// traer usuarios al localStorage
+// fetch("/json/usuGuardar.json")
+// .then(response => response.json())
+// .then(data => localStorage.setItem('Users', JSON.stringify(data)))
+// // traer canciones al localStorage
+// fetch("/json/biblioteca.json")
+// .then(response => response.json())
+// .then(data => localStorage.setItem('Canciones', JSON.stringify(data)))
 
 // Validar acceder
 function validacion() {
