@@ -1,18 +1,10 @@
 [
     {
-        "artist": "Artista 1",
-        "name": "Canción 1",
-        "category": "Pop",
-        "duration": "3:45",
-        "imageUrl": "https://example.com/image1.jpg",
-        "published": true
+        "artista": "Marshmello",
+        "nombre": "Alone"
     },
     {
-        "artist": "Artista 2",
-        "name": "Canción 2",
-        "category": "Rock",
-        "duration": "4:12",
-        "imageUrl": "https://example.com/image2.jpg",
-        "published": false
+        "artista": "Marshmello ft Tiago Pzk ",
+        "nombre": "Como Yo"        
     }
 ]
