@@ -79,11 +79,7 @@ function addEventListeners() {
                 if (response.ok) {
                     // Eliminar la canción de la lista local
                     songs.splice(index, 1);
-    
-                    // Guardar el cambio en el localStorage
                     saveSongs();
-    
-                    // Actualizar la tabla para reflejar el cambio
                     renderSongs();
     
                     alert("Canción eliminada con éxito.");
