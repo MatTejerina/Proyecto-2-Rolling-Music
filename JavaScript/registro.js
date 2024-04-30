@@ -60,7 +60,7 @@ function validacion() {
             "estadoCuenta": false,
             admin : false
         };
-        fetch('http://localhost:3000/usuarios',{
+        fetch('https://json-server-render-r0gl.onrender.com',{
             method:'POST',
             body: JSON.stringify(nuevoUsuario),
             headers: {
