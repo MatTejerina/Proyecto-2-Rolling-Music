@@ -1,0 +1,24 @@
+{
+  "Users": [
+    {
+      "id": "13e9",
+      "usuario": "admin1",
+      "nombre": "admin",
+      "apellido": "admin",
+      "mail": "admin@admin.com",
+      "contraseña": "123123",
+      "admin": true,
+      "estado": true
+    },
+    {
+      "id": "8ae6",
+      "usuario": "matias",
+      "nombre": "Matias",
+      "apellido": "Tejerina",
+      "mail": "matias@matias.com",
+      "contraseña": "123123",
+      "admin": false,
+      "estado": true
+    }
+  ]
+}

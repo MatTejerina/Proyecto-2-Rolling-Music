@@ -5,6 +5,9 @@ function validacion() {
 
     let usuario = document.Formu.Usuario.value;
     let contraseña = document.Formu.Contraseña.value;
+    let nombre = document.Formu.Nombre.value;
+    let apellido = document.Formu.Apellido.value;
+    let mail = document.Formu.Email.value;
 
     if (document.Formu.Usuario.value == "") {
         document.getElementById("resultado").innerHTML = "Ingresa un Usuario*";
@@ -56,11 +59,15 @@ function validacion() {
         
         let nuevoUsuario = {
             usuario,
+            nombre,
+            apellido,
+            mail,
             contraseña,
-            "estadoCuenta": false,
-            admin : false
+            admin : false,
+            "estado": true
         };
-        fetch('https://json-server-render-r0gl.onrender.com',{
+        // fetch('https://json-server-render-r0gl.onrender.com/usuarios',{
+        fetch('http://localhost:3000/Users',{
             method:'POST',
             body: JSON.stringify(nuevoUsuario),
             headers: {
@@ -72,7 +79,7 @@ function validacion() {
         // usuarios.push(nuevoUsuario);
         // localStorage.setItem("Users", JSON.stringify(usuarios));
         
-        enviarMail();
+        // enviarMail();
         mensaje.classList.add("abrir-mensaje");
         return false;
     } else {

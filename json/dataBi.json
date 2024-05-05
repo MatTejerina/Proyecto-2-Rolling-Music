@@ -1,0 +1,293 @@
+{ 
+  "Canciones": [
+    {
+      "id": "1",
+      "artist": "Sumo",
+      "name": "La Rubia Tarada",
+      "category": "Rock",
+      "duration": "3:45",
+      "imageUrl": "https://example.com/sumo_rubia_tarada.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Charly García",
+      "name": "Demoliendo hoteles",
+      "category": "Rock",
+      "duration": "4:07",
+      "imageUrl": "https://example.com/charly_demoliendo_hoteles.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Los Redondos",
+      "name": "Un ángel para tu soledad",
+      "category": "Rock",
+      "duration": "6:05",
+      "imageUrl": "https://example.com/redondos_angel_soledad.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Pappo's Blues",
+      "name": "Desconfío de la vida",
+      "category": "Blues",
+      "duration": "4:12",
+      "imageUrl": "https://example.com/pappo_blues_desconfio.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Soda Stereo",
+      "name": "De música ligera",
+      "category": "Rock",
+      "duration": "3:25",
+      "imageUrl": "https://example.com/soda_musica_ligera.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "LGante",
+      "name": "BZRP Music Sessions #40",
+      "category": "Trap",
+      "duration": "3:20",
+      "imageUrl": "https://example.com/lgante_bzrp_40.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Perro Primo",
+      "name": "Baila Morena",
+      "category": "Cumbia",
+      "duration": "3:18",
+      "imageUrl": "https://example.com/perro_primo_baila_morena.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "El Noba",
+      "name": "Dale Me Gusta",
+      "category": "Cumbia",
+      "duration": "2:45",
+      "imageUrl": "https://example.com/el_noba_dale_me_gusta.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "LGante",
+      "name": "Pistola y Cinturon",
+      "category": "Trap",
+      "duration": "3:15",
+      "imageUrl": "https://example.com/lgante_pistola_cinturon.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Perro Primo",
+      "name": "Dale",
+      "category": "Cumbia",
+      "duration": "2:50",
+      "imageUrl": "https://example.com/perro_primo_dale.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Bob Marley",
+      "name": "No Woman, No Cry",
+      "category": "Reggae",
+      "duration": "3:55",
+      "imageUrl": "https://example.com/bob_marley_no_woman_no_cry.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "UB40",
+      "name": "Red Red Wine",
+      "category": "Reggae",
+      "duration": "3:35",
+      "imageUrl": "https://example.com/ub40_red_red_wine.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Inner Circle",
+      "name": "Sweat (A La La La La Long)",
+      "category": "Reggae",
+      "duration": "3:29",
+      "imageUrl": "https://example.com/inner_circle_sweat.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Sean Paul",
+      "name": "Temperature",
+      "category": "Dancehall",
+      "duration": "3:37",
+      "imageUrl": "https://example.com/sean_paul_temperature.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Shaggy",
+      "name": "Angel",
+      "category": "Reggae Fusion",
+      "duration": "3:50",
+      "imageUrl": "https://example.com/shaggy_angel.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Daddy Yankee",
+      "name": "Gasolina",
+      "category": "Reguetón",
+      "duration": "3:14",
+      "imageUrl": "https://example.com/daddy_yankee_gasolina.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Don Omar",
+      "name": "Danza Kuduro (feat. Lucenzo)",
+      "category": "Reguetón",
+      "duration": "3:18",
+      "imageUrl": "https://example.com/don_omar_danza_kuduro.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Nicky Jam",
+      "name": "El Perdón (feat. Enrique Iglesias)",
+      "category": "Reguetón",
+      "duration": "3:25",
+      "imageUrl": "https://example.com/nicky_jam_el_perdon.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "J Balvin",
+      "name": "Ginza",
+      "category": "Reguetón",
+      "duration": "3:30",
+      "imageUrl": "https://example.com/j_balvin_ginza.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Ozuna",
+      "name": "Taki Taki (feat. DJ Snake, Selena Gomez, Cardi B)",
+      "category": "Reguetón",
+      "duration": "3:34",
+      "imageUrl": "https://example.com/ozuna_taki_taki.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Eminem",
+      "name": "Lose Yourself",
+      "category": "Rap",
+      "duration": "5:26",
+      "imageUrl": "https://example.com/eminem_lose_yourself.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Notorious B.I.G.",
+      "name": "Juicy",
+      "category": "Rap",
+      "duration": "5:02",
+      "imageUrl": "https://example.com/notorious_big_juicy.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Tupac Shakur",
+      "name": "California Love",
+      "category": "Rap",
+      "duration": "4:01",
+      "imageUrl": "https://example.com/tupac_california_love.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Dr. Dre",
+      "name": "Still D.R.E.",
+      "category": "Rap",
+      "duration": "4:12",
+      "imageUrl": "https://example.com/dr_dre_still_dre.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "N.W.A",
+      "name": "Straight Outta Compton",
+      "category": "Rap",
+      "duration": "4:13",
+      "imageUrl": "https://example.com/nwa_straight_outta_compton.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Adele",
+      "name": "Rolling in the Deep",
+      "category": "Pop",
+      "duration": "3:49",
+      "imageUrl": "https://example.com/adele_rolling_in_the_deep.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Ed Sheeran",
+      "name": "Shape of You",
+      "category": "Pop",
+      "duration": "3:53",
+      "imageUrl": "https://example.com/ed_sheeran_shape_of_you.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Taylor Swift",
+      "name": "Shake It Off",
+      "category": "Pop",
+      "duration": "3:39",
+      "imageUrl": "https://example.com/taylor_swift_shake_it_off.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Bruno Mars",
+      "name": "Uptown Funk (feat. Mark Ronson)",
+      "category": "Pop",
+      "duration": "4:30",
+      "imageUrl": "https://example.com/bruno_mars_uptown_funk.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Dua Lipa",
+      "name": "Don't Start Now",
+      "category": "Pop",
+      "duration": "3:03",
+      "imageUrl": "https://example.com/dua_lipa_dont_start_now.jpg",
+      "published": true
+    },  
+    {
+      "id": "1",
+      "artist": "Marshmello",
+      "name": "Alone",
+      "category": "Dance",
+      "duration": "4:33",
+      "imageUrl": "https://example.com/Marshmello_Alone.jpg",
+      "published": true
+    },
+    {
+      "id": "1",
+      "artist": "Marshmello ft Tiago Pzk",
+      "name": "Como Yo",
+      "category": "Dance",
+      "duration": "2:20",
+      "imageUrl": "https://example.com/Marshmello ft Tiago Pzk _Como_Yo.jpg",
+      "published": true
+    }
+  ]
+  
+}

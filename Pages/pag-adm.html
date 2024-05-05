@@ -36,8 +36,6 @@
           <li class="adminBtn"><a href="/Pages/pag-adm.html">Administracion</a></li>
           <li class="usubtn"><a href="/Index.html">Inicio</a></li>
           <li class="adminBtn usubtn"><a id="cerrarSesionBtn" href="/Index.html">Cerrar sesion</a></li>
-          <li class="indexbtn"><a href="#" data-bs-toggle="modal" data-bs-target="#modalacceder">Acceder</a></li>
-          <li class="indexbtn"><a href="/Pages/registro.html">Registro</a></li>
         </ul>
         <!-- buscador -->
         <i class="uil uil-search search-icon" id="searchIcon"></i>
@@ -103,129 +101,203 @@
         </div>
       </div>
 
-
-
-
-
-
-    <div class="container mt-5">
-        <h1 class="mb-4">Administración de Canciones</h1>
-        
-        <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#addSongModal">Agregar Canción</button>
-        
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Código</th>
-                    <th>Artista</th>
-                    <th>Canción</th>
-                    <th>Categoría</th>
-                    <th>Duración</th>
-                    <th>Imagen</th>
-                    <th>Publicado</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody class="text-center" id="songTableBody">
-                <!-- Canciones serán cargadas aquí por JavaScript -->
-            </tbody>
-        </table>
+      
+  
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Canciones</button>
+      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Usuarios</button>
     </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+        <div class="container mt-5">
+            <h1 class="mb-4 text-white">Administración de Canciones</h1>
+            
+            <button type="button" class="btn btn-primary mb-1" data-toggle="modal" data-target="#addSongModal">Agregar Canción</button>
 
-    <!-- Modal para agregar nueva canción -->
-    <div class="modal fade" id="addSongModal" tabindex="-1" role="dialog" aria-labelledby="addSongLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addSongLabel">Agregar Canción</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+            
+            <table class="table table-striped">
+                <thead>
+                    <tr class="text-center">
+                        <th>Código</th>
+                        <th>Artista</th>
+                        <th>Canción</th>
+                        <th>Categoría</th>
+                        <th>Duración</th>
+                        <th>Imagen</th>
+                        <th>Publicado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center" id="songTableBody">
+                    <!-- Canciones serán cargadas aquí por JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    
+        <!-- Modal para agregar nueva canción -->
+        <div class="modal fade" id="addSongModal" tabindex="-1" role="dialog" aria-labelledby="addSongLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addSongLabel">Agregar Canción</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="addSongForm">
+                            <div class="form-group">
+                                <label for="artistName">Nombre del Artista</label>
+                                <input type="text" class="form-control" id="artistName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="songName">Nombre de la Canción</label>
+                                <input type="text" class="form-control" id="songName" required>
+                            </div>
+                            <div class="form-group">
+                                <label para="category">Categoría</label>
+                                <input type="text" class="form-control" id="category" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="duration">Duración</label>
+                                <input type="text" class="form-control" id="duration" required>
+                            </div>
+                            <div class="form-group">
+                                <label para="imageUrl">URL de la Imagen</label>
+                                <input type="url" class="form-control" id="imageUrl" required>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="published">
+                                <label class="form-check-label" for="published">Publicado</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="saveSongButton">Guardar</button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <form id="addSongForm">
-                        <div class="form-group">
-                            <label for="artistName">Nombre del Artista</label>
-                            <input type="text" class="form-control" id="artistName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="songName">Nombre de la Canción</label>
-                            <input type="text" class="form-control" id="songName" required>
-                        </div>
-                        <div class="form-group">
-                            <label para="category">Categoría</label>
-                            <input type="text" class="form-control" id="category" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="duration">Duración</label>
-                            <input type="text" class="form-control" id="duration" required>
-                        </div>
-                        <div class="form-group">
-                            <label para="imageUrl">URL de la Imagen</label>
-                            <input type="url" class="form-control" id="imageUrl" required>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="published">
-                            <label class="form-check-label" for="published">Publicado</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" id="saveSongButton">Guardar</button>
+            </div>
+        </div>
+    
+        <!-- Modal para editar canción -->
+        <div class="modal fade" id="editSongModal" tabindex="-1" role="dialog" aria-labelledby="editSongLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editSongLabel">Editar Canción</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editSongForm">
+                            <div class="form-group">
+                                <label para="editArtistName">Nombre del Artista</label>
+                                <input type="text" class="form-control" id="editArtistName" required>
+                            </div>
+                            <div class="form-group">
+                                <label para="editSongName">Nombre de la Canción</label>
+                                <input type="text" class="form-control" id="editSongName" required>
+                            </div>
+                            <div class="form-group">
+                                <label para="editCategory">Categoría</label>
+                                <input type="text" class="form-control" id="editCategory" required>
+                            </div>
+                            <div class="form-group">
+                                <label para="editDuration">Duración</label>
+                                <input type="text" class="form-control" id="editDuration" required>
+                            </div>
+                            <div class="form-group">
+                                <label para="editImageUrl">URL de la Imagen</label>
+                                <input type="url" class="form-control" id="editImageUrl" required>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="editPublished">
+                                <label class="form-check-label" para="editPublished">Publicado</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="editSaveSongButton">Guardar Cambios</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Modal para editar canción -->
-    <div class="modal fade" id="editSongModal" tabindex="-1" role="dialog" aria-labelledby="editSongLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editSongLabel">Editar Canción</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="editSongForm">
-                        <div class="form-group">
-                            <label para="editArtistName">Nombre del Artista</label>
-                            <input type="text" class="form-control" id="editArtistName" required>
-                        </div>
-                        <div class="form-group">
-                            <label para="editSongName">Nombre de la Canción</label>
-                            <input type="text" class="form-control" id="editSongName" required>
-                        </div>
-                        <div class="form-group">
-                            <label para="editCategory">Categoría</label>
-                            <input type="text" class="form-control" id="editCategory" required>
-                        </div>
-                        <div class="form-group">
-                            <label para="editDuration">Duración</label>
-                            <input type="text" class="form-control" id="editDuration" required>
-                        </div>
-                        <div class="form-group">
-                            <label para="editImageUrl">URL de la Imagen</label>
-                            <input type="url" class="form-control" id="editImageUrl" required>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="editPublished">
-                            <label class="form-check-label" para="editPublished">Publicado</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" id="editSaveSongButton">Guardar Cambios</button>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+        <div class="container mt-5">
+            <h1 class="mb-4 text-white">Administración de Usuarios</h1>
+        
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo Electrónico</th>
+                        <th>Admin</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center" id="userTableBody">
+                    <!-- Usuarios serán cargados aquí por JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Modal para editar usuario -->
+        <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="editUserLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editUserLabel">Editar Usuario</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editUserForm">
+                            <div class="form-group">
+                                <label para="editFirstName">Nombre</label>
+                                <input type="text" class="form-control" id="editFirstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label para="editLastName">Apellido</label>
+                                <input type="text" class="form-control" id="editLastName" required>
+                            </div>
+                            <div class form-group">
+                                <label para="editUsername">Usuario</label>
+                                <input type="text" class="form-control" id="editUsername" required>
+                            </div>
+                            <div class="form-group">
+                                <label para="editEmail">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="editEmail" required>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="editIsAdmin">
+                                <label class="form-check-label" para="editIsAdmin">Admin</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="editSaveUserButton">Guardar Cambios</button>
+                    </div>
                 </div>
             </div>
         </div>
+        
     </div>
+  </div>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="../JavaScript/pag-adm.js"></script>
     <script src="../JavaScript/Index.js"></script>
 </body>

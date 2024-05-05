@@ -1,19 +1,6 @@
-fetch('https://json-server-render-r0gl.onrender.com/usuarios')
+fetch('http://localhost:3000/Users')
 .then(response=>response.json())
 .then(data => localStorage.setItem('Users', JSON.stringify(data)))
-
-fetch('https://json-server-render-r0gl.onrender.com/cancioness')
-.then(response=>response.json())
-.then(data => localStorage.setItem('Users', JSON.stringify(data)))
-
-// traer usuarios al localStorage
-// fetch("/json/usuGuardar.json")
-// .then(response => response.json())
-// .then(data => localStorage.setItem('Users', JSON.stringify(data)))
-// // traer canciones al localStorage
-// fetch("/json/biblioteca.json")
-// .then(response => response.json())
-// .then(data => localStorage.setItem('Canciones', JSON.stringify(data)))
 
 // Validar acceder
 function validacion() {
@@ -33,8 +20,8 @@ function validacion() {
         document.getElementById("resultado").innerHTML = "Contraseña de 6 caracteres*";
         return false;
     } 
-    const traerUsu = localStorage.getItem('Users')//trae la key
-    const usuarios = JSON.parse(traerUsu); // la parsea
+    const traerUsu = localStorage.getItem('Users');//trae la key
+    const usuarios = JSON.parse(traerUsu)|| []; // la parsea
     const usuarioEncontrado = usuarios.find(
         u => u.usuario === usuario && u.contraseña === contraseña
     );
@@ -131,52 +118,70 @@ function mostrar() {
     document.getElementById("recuperarContraseña")
     
 }
-// buscador
 
-document.addEventListener("DOMContentLoaded", () => {
+// buscador
+// Función para obtener datos de canciones desde el servidor JSON
+const getCanciones = async () => {
+    try {
+      const response = await fetch("/json/dataBi.json"); // Ruta al JSON
+      const jsonData = await response.json(); // Obtener datos JSON
+      const canciones = jsonData.Canciones || []; // Asegurar que el campo Canciones existe
+      return canciones;
+    } catch (error) {
+      console.error("Error al obtener las canciones:", error);
+      return []; // Retornar lista vacía en caso de error
+    }
+  };
+  
+  document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.querySelector(".inputbuscar");
     const resultList = document.getElementById("resultsList");
     const noResults = document.getElementById("noResults");
-
-    // Recuperar canciones desde el localStorage
-    let musicLibrary = JSON.parse(localStorage.getItem("Canciones")) || [];
-
-    const handleSearch = () => {
-        const searchTerm = searchInput.value.toLowerCase();
-        const filteredResults = musicLibrary.filter(item =>
-            item.artist.toLowerCase().includes(searchTerm) ||
-            item.name.toLowerCase().includes(searchTerm)
-        );
-
-        resultList.innerHTML = "";
-
-        if (filteredResults.length > 0) {
-            filteredResults.forEach(item => {
-                const li = document.createElement("li");
-                li.textContent = `${item.artist} - ${item.name}`;
-                li.classList.add("selectable-result");
-                li.addEventListener("click", () => {
-                    if (item.artist.toLowerCase() === "marshmello" && 
-                        item.name.toLowerCase() === "alone") {
-                        window.location.href = "../Pages/detalle-cancion.html";
-                    } else {
-                        window.location.href = "../Pages/Error-404.html";
-                    }
-                });
-                resultList.appendChild(li);
-            });
-            noResults.style.display = "none";
-        } else {
-            noResults.style.display = "block";
-        }
-
-        // Limpiar la lista
-        if (searchInput.value === "") {
-            resultList.innerHTML = "";
-        }
+  
+    const handleSearch = async () => {
+      const searchTerm = searchInput.value.toLowerCase(); // Término de búsqueda
+      const musicLibrary = await getCanciones(); // Obtener la lista de canciones
+  
+      // Filtrar resultados por coincidencia con el artista o nombre de la canción
+      const filteredResults = musicLibrary.filter((item) =>
+        item.artist.toLowerCase().includes(searchTerm) ||
+        item.name.toLowerCase().includes(searchTerm)
+      );
+  
+      resultList.innerHTML = ""; // Limpiar resultados previos
+  
+      if (filteredResults.length > 0) {
+        // Mostrar los resultados filtrados
+        filteredResults.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = `${item.artist} - ${item.name}`; // Texto del resultado
+          li.classList.add("selectable-result");
+  
+          // Evento de clic para redireccionar según el resultado
+          li.addEventListener("click", () => {
+            if (item.artist.toLowerCase() === "marshmello" &&
+                item.name.toLowerCase() === "alone") {
+              window.location.href = "../Pages/detalle-cancion.html"; // Redirección al detalle
+            } else {
+              window.location.href = "../Pages/Error-404.html"; // Redirección a página de error
+            }
+          });
+  
+          resultList.appendChild(li); // Agregar resultado a la lista
+        });
+        noResults.style.display = "none"; // Ocultar mensaje de "sin resultados"
+      } else {
+        // Si no hay resultados, mostrar el mensaje de "sin resultados"
+        noResults.style.display = "block";
+      }
+  
+      // Limpiar la lista si el término de búsqueda está vacío
+      if (searchInput.value.trim() === "") {
+        resultList.innerHTML = ""; // Limpiar lista de resultados
+        noResults.style.display = "none"; // Ocultar mensaje de "sin resultados"
+      }
     };
-
-    searchInput.addEventListener("input", handleSearch);
-});
-
-
+  
+    searchInput.addEventListener("input", handleSearch); // Evento para manejar búsquedas
+  });
+  
